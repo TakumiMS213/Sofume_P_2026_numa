@@ -4,41 +4,44 @@
   if (!startup) return;
 
   const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
-  const navigation = performance.getEntriesByType("navigation")[0];
-  const storageKey = `game-exhibition:startup:${new URL(".", location.href).pathname}`;
-  let seen = false;
-  try { seen = sessionStorage.getItem(storageKey) === "shown"; } catch { /* Storage may be disabled. */ }
-
-  // Direct section links and return visits go straight to the exhibition.
-  if (motion.matches || seen || location.hash || navigation?.type === "back_forward") {
-    startup.remove();
-    return;
-  }
-
-  let finished = false;
   const skipEvents = ["pointerdown", "keydown", "wheel"];
+  let playing = false;
+  let fallback = 0;
+
   function finish() {
-    if (finished) return;
-    finished = true;
+    if (!playing) return;
+    playing = false;
     window.clearTimeout(fallback);
     startup.remove();
     skipEvents.forEach(type => document.removeEventListener(type, finish, true));
-    motion.removeEventListener("change", onMotionChange);
-    window.removeEventListener("pagehide", finish);
-  }
-  function onMotionChange() {
-    if (motion.matches) finish();
   }
 
-  // Always remove the curtain, even if CSS animations are disabled or interrupted.
-  const fallback = window.setTimeout(finish, 1900);
+  function start() {
+    if (playing) return;
+    if (motion.matches) {
+      startup.remove();
+      return;
+    }
+
+    playing = true;
+    if (!startup.isConnected) document.body.prepend(startup);
+    startup.hidden = false;
+    skipEvents.forEach(type => document.addEventListener(type, finish, { capture: true, passive: true }));
+    // The exit completes at 1.95s; also finish if CSS animations are interrupted.
+    fallback = window.setTimeout(finish, 2300);
+  }
+
   startup.addEventListener("animationend", event => {
     if (event.target === startup && event.animationName === "startup-exit") finish();
   });
-  skipEvents.forEach(type => document.addEventListener(type, finish, { capture: true, passive: true }));
-  motion.addEventListener("change", onMotionChange);
+  motion.addEventListener("change", () => {
+    if (motion.matches) finish();
+  });
   window.addEventListener("pagehide", finish);
+  // A cached history entry resumes this script instead of running it again.
+  window.addEventListener("pageshow", event => {
+    if (event.persisted) start();
+  });
 
-  try { sessionStorage.setItem(storageKey, "shown"); } catch { /* The animation still works without storage. */ }
-  startup.hidden = false;
+  start();
 })();

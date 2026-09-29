@@ -5,6 +5,10 @@
   --muted:#686d66;
   --paper:#fafbf8;
   --line:#dfe3da;
+  --background-dots:
+    radial-gradient(circle at 8px 8px,#d1d1d1 1px,transparent 1.2px),
+    radial-gradient(circle at 24px 24px,#d1d1d1 .6px,transparent .8px);
+  --background-dot-spacing:32px 32px;
   --mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
   --radius:16px
 }
@@ -21,6 +25,8 @@ html {
 body {
   margin:0;
   background:var(--paper);
+  background-image:var(--background-dots);
+  background-size:var(--background-dot-spacing);
   color:var(--ink);
   font-family:Arial,"Hiragino Kaku Gothic ProN","Noto Sans JP",Meiryo,sans-serif;
   font-size:15px;
@@ -301,12 +307,8 @@ button:focus-visible,a:focus-visible,video:focus-visible,[tabindex]:focus-visibl
   isolation:isolate
 }
 
-.art-grid {
-  position:absolute;
-  inset:8% 1% 4%;
-  background-image:radial-gradient(#b6beb0 1px,transparent 1px);
-  background-size:18px 18px;
-  mask-image:radial-gradient(ellipse,#000 35%,transparent 74%)
+.hero-art>[aria-hidden="true"] {
+  pointer-events:none;
 }
 
 .orbit {
@@ -467,6 +469,51 @@ button:focus-visible,a:focus-visible,video:focus-visible,[tabindex]:focus-visibl
   font-family:var(--mono);
   font-size:6px;
   letter-spacing:1px
+}
+
+/* Press depth is separate from the wrapper's gentle floating animation. */
+.controller-interactive {
+  --press-x:4px;
+  --press-y:6px;
+  width:100%;
+  height:100%;
+  padding:0;
+  appearance:none;
+  text-align:left;
+  user-select:none;
+  transition:transform .18s cubic-bezier(.2,1.4,.4,1),box-shadow .18s ease,background .18s ease;
+}
+
+.controller-wrap:has(.controller-interactive:is(:active,.is-pressed)) {
+  animation-play-state:paused;
+}
+
+.controller-interactive:is(:active,.is-pressed) {
+  transform:translate(var(--press-x),var(--press-y));
+  box-shadow:2px 3px 0 var(--ink);
+  background:#70ef76;
+  transition-duration:.07s;
+  transition-timing-function:ease-out;
+}
+
+.controller-interactive .d-pad,
+.controller-interactive .controller-buttons i,
+.controller-interactive .controller-bottom i {
+  transition:transform .16s ease,box-shadow .16s ease,filter .16s ease;
+}
+
+.controller-interactive .d-pad.is-pressed {
+  transform:translate(2px,3px);
+  filter:drop-shadow(0 0 0 #3eb247);
+}
+
+.controller-interactive .controller-buttons i.is-pressed {
+  transform:translate(1px,2px) scale(.9);
+  box-shadow:0 0 0 var(--ink),inset 0 2px 3px #20231f40;
+}
+
+.controller-interactive .controller-bottom i.is-pressed {
+  transform:translateY(2px) scale(.9);
 }
 
 .art-label {
@@ -1729,6 +1776,10 @@ button:focus-visible,a:focus-visible,video:focus-visible,[tabindex]:focus-visibl
     border-radius:46px;
     box-shadow:8px 12px 0 var(--ink)
   }
+  .controller-interactive {
+    --press-x:6px;
+    --press-y:9px;
+  }
   .controller-topline {
     font-size:9px
   }
@@ -1915,7 +1966,7 @@ button:focus-visible,a:focus-visible,video:focus-visible,[tabindex]:focus-visibl
   }
 }
 
-/* First-visit startup: reuse the exhibition's CSS controller icon. */
+/* Startup on each visit: reuse the exhibition's CSS controller icon. */
 .startup {
   position:fixed;
   inset:0;
@@ -1924,8 +1975,10 @@ button:focus-visible,a:focus-visible,video:focus-visible,[tabindex]:focus-visibl
   place-items:center;
   overflow:hidden;
   background:var(--paper);
+  background-image:var(--background-dots);
+  background-size:var(--background-dot-spacing);
   pointer-events:none;
-  animation:startup-exit .28s 1.25s ease both;
+  animation:startup-exit .25s 1.7s ease both;
 }
 
 .startup-stage {
@@ -1935,15 +1988,6 @@ button:focus-visible,a:focus-visible,video:focus-visible,[tabindex]:focus-visibl
   align-items:center;
   width:min(340px,calc(100% - 40px));
   padding-block:48px;
-}
-
-.startup-stage::before {
-  content:"";
-  position:absolute;
-  inset:-40px -20px 30px;
-  background-image:radial-gradient(#bac7b5 1px,transparent 1px);
-  background-size:16px 16px;
-  mask-image:radial-gradient(ellipse,#000 15%,transparent 70%);
 }
 
 .startup-orbit {
@@ -1964,7 +2008,8 @@ button:focus-visible,a:focus-visible,video:focus-visible,[tabindex]:focus-visibl
   max-width:80%;
   aspect-ratio:1.5;
   transform:rotate(-12deg);
-  animation:startup-device .65s cubic-bezier(.2,.8,.3,1) both;
+  animation:startup-device .65s cubic-bezier(.2,.8,.3,1) both,
+    startup-device-exit .6s 1.1s cubic-bezier(.55,.05,.8,.45) forwards;
 }
 
 .startup-device .controller {
@@ -2024,6 +2069,12 @@ button:focus-visible,a:focus-visible,video:focus-visible,[tabindex]:focus-visibl
 @keyframes startup-device {
   from { opacity:0; transform:translateY(12px) rotate(-18deg) scale(.88); }
   to { opacity:1; transform:translateY(0) rotate(-12deg) scale(1); }
+}
+
+@keyframes startup-device-exit {
+  from { opacity:1; transform:rotate(-12deg) scale(1); }
+  75% { opacity:1; }
+  to { opacity:0; transform:rotate(-372deg) scale(0); }
 }
 
 @keyframes startup-power {
