@@ -29,6 +29,7 @@ Pythonがない場合は、VS CodeのLive Serverなどでも確認できます�
 ```js
 window.EXHIBITION = {
   name: "ソフトメディア研究会",
+  logo: "./assets/images/SofumeLogo_BlackTextAlpha_1920x1080.png",
   year: "2026",
   festivalName: "津田沼祭 ゲーム作品展",
   message: "会場は○号館○○教室です。スタッフにお気軽に声をかけてください。",
@@ -39,6 +40,8 @@ window.EXHIBITION = {
 `sampleMode: false` にすると「サンプル作品」の注記が消えます。実作品へ差し替えてから変更してください。ヘッダー・フッター・ページタイトルに名前が自動で反映されます。トップの案内文は `index.html` で変更できます。JavaScriptが動く前のページタイトル・説明文も変更したい場合は、両方のHTMLの `<title>` と `<meta name="description">` も編集します。
 
 トップの大きな見出しは `festivalName` から表示します。`津田沼祭 ゲーム作品展` のように祭名と展示名の間に半角スペースを入れると、2行に分けて表示します。
+
+団体ロゴは `logo` で指定し、トップ・詳細ページのヘッダーとフッターに表示します。明るい背景用の黒文字版を使用しています。白文字版は暗い背景用として同じ画像フォルダに保存しています。元画像の透明余白は `css/style.css` の `.brand-logo` で表示位置を調整しており、画像ファイル自体は加工していません。異なる寸法のロゴへ変更する場合は、この表示枠も調整してください。JavaScript無効時のロゴも変更するには、両HTMLの `data-site-logo` が付いた画像の `src` を変更します。
 
 ## 3. ゲームを追加する
 

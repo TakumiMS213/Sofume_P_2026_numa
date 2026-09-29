@@ -154,14 +154,24 @@ button:focus-visible,a:focus-visible,video:focus-visible,[tabindex]:focus-visibl
   min-height:44px
 }
 
-.brand-mark {
+.brand-logo {
   display:block;
   flex-shrink:0;
-  width:23px;
-  height:23px;
+  width:260px;
+  aspect-ratio:1743 / 305;
   position:relative;
-  background:var(--ink);
-  clip-path:polygon(33% 0,66% 0,66% 33%,100% 33%,100% 66%,66% 66%,66% 100%,33% 100%,33% 66%,0 66%,0 33%,33% 33%)
+  overflow:hidden;
+}
+
+/* Original canvas: 1920×1080. Visible logo: x=68, y=385, 1743×305.
+   Only transparent margins are excluded; the supplied PNG stays unchanged. */
+.brand-logo img {
+  position:absolute;
+  width:110.1549%;
+  max-width:none;
+  height:auto;
+  left:-3.9013%;
+  top:-126.2295%;
 }
 
 .site-header nav {
@@ -909,14 +919,18 @@ button:focus-visible,a:focus-visible,video:focus-visible,[tabindex]:focus-visibl
   font-size:18px
 }
 
-.site-footer .brand-mark {
-  width:19px;
-  height:19px
+.site-footer .brand-logo {
+  width:220px;
 }
 
 .site-footer p {
   font-size:11px;
   color:var(--muted)
+}
+
+.site-footer .creator-credit {
+  flex-basis:100%;
+  text-align:right;
 }
 
 .site-footer>.mono {
@@ -1534,9 +1548,8 @@ button:focus-visible,a:focus-visible,video:focus-visible,[tabindex]:focus-visibl
   .brand {
     font-size:22px
   }
-  .brand-mark {
-    width:28px;
-    height:28px
+  .brand-logo {
+    width:300px;
   }
   .site-header nav {
     gap:26px

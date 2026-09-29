@@ -1,9 +1,10 @@
 /* サイトの名前と全作品をここで管理します。追加方法はREADME.mdを参照してください。 */
 window.EXHIBITION = {
   name: "ソフトメディア研究会",
+  logo: "./assets/images/SofumeLogo_BlackTextAlpha_1920x1080.png",
   year: "2026",
   festivalName: "津田沼祭 ゲーム作品展",
-  message: "操作や展示について不明な点は、会場のスタッフにお尋ねください。",
+  message: "操作や展示について不明な点は、P班ブースのスタッフにお尋ねください。",
   sampleMode: true,
 };
 

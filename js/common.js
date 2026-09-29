@@ -12,6 +12,10 @@
   const siteName = site.name || "ソフトメディア研究会";
   document.querySelectorAll("[data-site-name]").forEach(node => { node.textContent = siteName; });
   document.querySelectorAll("a.brand").forEach(node => { node.setAttribute("aria-label", `${siteName} トップページ`); });
+  document.querySelectorAll("[data-site-logo]").forEach(node => {
+    node.alt = `${siteName} ロゴ`;
+    if (site.logo && node.getAttribute("src") !== mediaPath(site.logo)) node.src = mediaPath(site.logo);
+  });
   document.querySelectorAll("[data-site-edition]").forEach(node => { node.textContent = `${site.year || "2026"}年`; });
   document.querySelectorAll("[data-site-year]").forEach(node => { node.textContent = site.year || "2026"; });
   document.querySelectorAll("[data-festival-name]").forEach(node => { node.textContent = site.festivalName || "ゲーム作品展"; });
@@ -48,6 +52,10 @@
   // A missing user-supplied image falls back once, without an error loop.
   document.addEventListener("error", event => {
     const target = event.target;
+    if (target instanceof HTMLImageElement && target.matches("[data-site-logo]")) {
+      target.closest(".brand")?.replaceChildren(document.createTextNode(siteName));
+      return;
+    }
     if (target instanceof HTMLImageElement && !target.dataset.fallback) {
       target.dataset.fallback = "true";
       target.src = "./assets/images/placeholder.svg";
