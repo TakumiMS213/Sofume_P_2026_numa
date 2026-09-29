@@ -471,40 +471,85 @@ button:focus-visible,a:focus-visible,video:focus-visible,[tabindex]:focus-visibl
   letter-spacing:1px
 }
 
-/* Press depth is separate from the wrapper's gentle floating animation. */
+/* Key presses are separate from the wrapper's gentle floating animation. */
 .controller-interactive {
-  --press-x:4px;
-  --press-y:6px;
   width:100%;
   height:100%;
   padding:0;
   appearance:none;
   text-align:left;
   user-select:none;
-  transition:transform .18s cubic-bezier(.2,1.4,.4,1),box-shadow .18s ease,background .18s ease;
 }
 
 .controller-wrap:has(.controller-interactive:is(:active,.is-pressed)) {
   animation-play-state:paused;
 }
 
-.controller-interactive:is(:active,.is-pressed) {
-  transform:translate(var(--press-x),var(--press-y));
-  box-shadow:2px 3px 0 var(--ink);
-  background:#70ef76;
-  transition-duration:.07s;
-  transition-timing-function:ease-out;
-}
-
-.controller-interactive .d-pad,
+.controller-interactive .d-pad [data-direction],
 .controller-interactive .controller-buttons i,
 .controller-interactive .controller-bottom i {
   transition:transform .16s ease,box-shadow .16s ease,filter .16s ease;
 }
 
-.controller-interactive .d-pad.is-pressed {
+.controller-interactive .d-pad {
+  filter:none;
+  isolation:isolate;
+}
+
+.controller-interactive .d-pad::before,
+.controller-interactive .d-pad::after {
+  background:#3eb247;
   transform:translate(2px,3px);
-  filter:drop-shadow(0 0 0 #3eb247);
+  z-index:-1;
+}
+
+.controller-interactive .d-pad i {
+  position:absolute;
+  background:var(--ink);
+}
+
+/* The four arms overlap beneath a fixed center to keep the cross connected. */
+.controller-interactive .d-pad [data-direction="up"],
+.controller-interactive .d-pad [data-direction="down"] {
+  left:33%;
+  width:34%;
+  height:50%;
+}
+
+.controller-interactive .d-pad [data-direction="left"],
+.controller-interactive .d-pad [data-direction="right"] {
+  top:33%;
+  width:50%;
+  height:34%;
+}
+
+.controller-interactive .d-pad [data-direction="up"] {
+  top:0;
+  border-radius:4px 4px 0 0;
+}
+
+.controller-interactive .d-pad [data-direction="right"] {
+  right:0;
+  border-radius:0 4px 4px 0;
+}
+
+.controller-interactive .d-pad [data-direction="down"] {
+  bottom:0;
+  border-radius:0 0 4px 4px;
+}
+
+.controller-interactive .d-pad [data-direction="left"] {
+  left:0;
+  border-radius:4px 0 0 4px;
+}
+
+.controller-interactive .d-pad .d-pad-center {
+  inset:33%;
+  z-index:1;
+}
+
+.controller-interactive .d-pad [data-direction].is-pressed {
+  transform:translate(2px,3px) scale(.94);
 }
 
 .controller-interactive .controller-buttons i.is-pressed {
@@ -1775,10 +1820,6 @@ button:focus-visible,a:focus-visible,video:focus-visible,[tabindex]:focus-visibl
   .controller {
     border-radius:46px;
     box-shadow:8px 12px 0 var(--ink)
-  }
-  .controller-interactive {
-    --press-x:6px;
-    --press-y:9px;
   }
   .controller-topline {
     font-size:9px

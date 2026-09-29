@@ -3,8 +3,9 @@
   const controller = document.querySelector("[data-controller]");
   if (!controller) return;
 
-  const controls = ".d-pad, .controller-buttons i, .controller-bottom i";
+  const controls = ".d-pad [data-direction], .controller-buttons i, .controller-bottom i";
   const keyboardControl = controller.querySelector(".controller-buttons i:nth-child(3)");
+  const directionKeys = { ArrowUp: "up", ArrowRight: "right", ArrowDown: "down", ArrowLeft: "left" };
   let pointerId = null;
   let activeKey = null;
   let pressedAt = 0;
@@ -50,10 +51,11 @@
   window.addEventListener("pointercancel", cancelPointer);
 
   controller.addEventListener("keydown", event => {
-    if (event.key !== " " && event.key !== "Enter") return;
+    const direction = directionKeys[event.key];
+    if (event.key !== " " && event.key !== "Enter" && !direction) return;
     event.preventDefault();
     if (event.repeat || pointerId !== null || activeKey !== null) return;
-    press(keyboardControl);
+    press(direction ? controller.querySelector(`[data-direction="${direction}"]`) : keyboardControl);
     activeKey = event.key;
   });
   controller.addEventListener("keyup", event => {
