@@ -73,8 +73,6 @@ def forest(scene=0, icon=False):
         s += rect(x, 389, 3, 16, "#75d5bc") + rect(x - 4, 382, 11, 7, "#b3f5c2")
     if icon:
         s += text(480, 118, "MOSSBOUND", 48, "#eef2cd", 'font-weight="900" letter-spacing="1"')
-        s += text(480, 143, "A LITTLE LIGHT. A BIG ADVENTURE.", 9, "#bbd0a8", 'letter-spacing="2"')
-        s += text(480, 501, "WANDER INTO THE UNKNOWN", 9, "#a3c3a2", 'letter-spacing="3"')
     else:
         s += text(95, 34, "MOSSBOUND", 16, "#dcebc7", 'font-weight="700" letter-spacing="2"')
         s += text(865, 34, f"FOREST / 0{scene}", 11, "#dcebc7", 'letter-spacing="2"')
@@ -108,8 +106,6 @@ def orbit(scene=0, icon=False):
     s += '<ellipse cx="481" cy="367" rx="18" ry="9" fill="none" stroke="#f6ffd0" stroke-width="3"/>'
     if icon:
         s += text(480, 104, "ORBIT SHIFT", 48, "#eeecff", 'font-weight="900" letter-spacing="-1"')
-        s += text(480, 133, "A CHANGE OF PERSPECTIVE.", 10, "#c0bfdf", 'letter-spacing="2.5"')
-        s += text(480, 495, "TURN YOUR WORLD AROUND", 9, "#c0bfdf", 'letter-spacing="3"')
     else:
         s += text(103, 35, "ORBIT SHIFT", 16, "#e8e5ff", 'font-weight="700" letter-spacing="2"')
         s += text(857, 35, f"STAGE / 0{scene}", 11, "#e8e5ff", 'letter-spacing="2"')
@@ -147,7 +143,6 @@ def neon(scene=0, icon=False):
     s += f'<g transform="translate({dx} 0)"><ellipse cx="480" cy="483" rx="110" ry="15" fill="#e173bd" opacity=".18"/><path d="M393 436l30-45h111l35 45 13 4v45H379v-43z" fill="#ce9aaf"/><path d="M422 396h107l25 36H404z" fill="#272b48"/><path d="M429 399h94l18 27H413z" fill="#626685"/><path d="M379 444h203v35H379z" fill="#71637e"/><path d="M386 450h59v10h-59zM515 450h59v10h-59z" fill="#ffb1b0"/><path d="M390 449h50v3h-50zM520 449h50v3h-50z" fill="#ffe9c9"/><path d="M454 457h49v16h-49z" fill="#28263c"/><path d="M464 461h29v7h-29z" fill="#d7c6c5"/><path d="M379 478h203v8H379z" fill="#272539"/><path d="M386 480h24v13h-24zM550 480h25v13h-25z" fill="#181c2a"/><path d="M388 438h183v5H388z" fill="#f1bfcc"/></g>'
     if icon:
         s += text(480, 107, "NEON DRIFT", 48, "#fce6ee", 'font-weight="900" font-style="italic" letter-spacing="-1"')
-        s += text(480, 135, "CHASE THE NIGHT.", 10, "#e7b1d1", 'letter-spacing="4"')
     else:
         s += text(107, 34, "NEON DRIFT", 16, "#ffe1ef", 'font-weight="700" font-style="italic" letter-spacing="2"')
         s += text(860, 34, "LAP 01 / 03", 13, "#ffe1ef", 'letter-spacing="2"')

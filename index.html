@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#7BFF81">
-  <meta name="description" content="学生の遊び心から生まれた、オリジナルゲームの展示室。気になる作品を見つけて、操作方法をチェックして、遊んでみよう。">
-  <title>GAME LAB. — GAME EXHIBITION 2026</title>
+  <meta name="description" content="ソフトメディア研究会の津田沼祭ゲーム作品展。展示作品の概要・操作方法・スクリーンショットを掲載しています。">
+  <title>津田沼祭 ゲーム作品展 2026 — ソフトメディア研究会</title>
   <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./css/style.css">
   <script defer src="./js/games.js"></script>
@@ -13,47 +13,59 @@
   <script defer src="./js/main.js"></script>
 </head>
 <body>
+  <div class="startup" id="startup" hidden aria-hidden="true">
+    <div class="startup-stage">
+      <div class="startup-orbit"></div>
+      <div class="startup-device">
+        <div class="controller">
+          <span class="startup-led"></span>
+          <div class="d-pad"></div>
+          <div class="controller-buttons"><i></i><i></i><i></i><i></i></div>
+          <div class="controller-bottom"><i></i><i></i></div>
+        </div>
+      </div>
+      <p class="startup-caption" data-festival-name>津田沼祭 ゲーム作品展</p>
+    </div>
+  </div>
+  <script src="./js/startup.js"></script>
   <a class="skip-link" href="#main">本文へスキップ</a>
   <header class="site-header container">
-    <a class="brand" href="./index.html" aria-label="GAME LAB. トップページ"><span class="brand-mark" aria-hidden="true"></span><span data-site-name>GAME LAB.</span></a>
-    <nav aria-label="メインナビゲーション"><a href="#games">作品一覧<span class="nav-arrow" aria-hidden="true"> ↗</span></a><a href="#about">展示について</a></nav>
-    <span class="edition mono" data-site-edition>2026 EDITION</span>
+    <a class="brand" href="./index.html" aria-label="ソフトメディア研究会 トップページ"><span class="brand-mark" aria-hidden="true"></span><span data-site-name>ソフトメディア研究会</span></a>
+    <nav aria-label="メインナビゲーション"><a href="#games">作品一覧</a><a href="#about">展示案内</a></nav>
+    <span class="edition" data-site-edition>2026年</span>
   </header>
   <main id="main">
     <section class="hero container" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> STUDENT GAME EXHIBITION</p>
-        <h1 id="hero-title">PRESS<br><span class="play-word">PLAY<span class="green-dot">.</span><span class="title-spark" aria-hidden="true">✳</span></span></h1>
-        <h2>遊び心、起動。</h2>
-        <p class="hero-description">「好き」から生まれた、まだ見ぬ遊び。<br>私たちがつくったゲームの世界へ、ようこそ。</p>
-        <a class="button button-dark" href="#games">ゲームを見つける <span aria-hidden="true">↘</span></a>
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> GAME EXHIBITION</p>
+        <h1 id="hero-title" data-festival-heading><span>津田沼祭</span><span>ゲーム作品展</span></h1>
+        <p class="hero-description"><span data-site-name>ソフトメディア研究会</span>の展示作品を紹介します。<br>各作品の概要・操作方法をご覧いただけます。</p>
+        <a class="button button-dark" href="#games">作品一覧・操作方法 <span aria-hidden="true">↘</span></a>
       </div>
       <div class="hero-art" aria-hidden="true">
         <div class="art-grid"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
         <span class="art-cross cross-one">+</span><span class="art-cross cross-two">+</span>
-        <div class="art-label label-top"><span class="mini-star">✳</span> MADE OF CURIOSITY</div>
-        <div class="controller-wrap"><div class="controller"><div class="controller-topline"><span>GAME LAB.</span><span>● ● ●</span></div><div class="d-pad"></div><div class="controller-buttons"><i></i><i></i><i></i><i></i></div><div class="controller-bottom"><i></i><i></i></div><span class="controller-caption">LET’S PLAY SOMETHING NEW</span></div></div>
-        <span class="art-spark">✳</span><div class="play-token">PLAY<br><span>YOUR WAY ↗</span></div>
-        <div class="art-label label-bottom"><span class="status-dot"></span> 100% ORIGINAL GAMES</div>
-        <div class="art-coordinate mono">35° CURIOSITY / 100° CREATIVITY</div>
+        <div class="art-label label-top"><span class="mini-star">✳</span><span data-festival-name>津田沼祭 ゲーム作品展</span></div>
+        <div class="controller-wrap"><div class="controller"><div class="controller-topline"><span data-site-name>ソフトメディア研究会</span><span>● ● ●</span></div><div class="d-pad"></div><div class="controller-buttons"><i></i><i></i><i></i><i></i></div><div class="controller-bottom"><i></i><i></i></div><span class="controller-caption">GAME EXHIBITION</span></div></div>
+        <span class="art-spark">✳</span><div class="play-token"><span class="token-year" data-site-year>2026</span><span>作品展示</span></div>
+        <div class="art-label label-bottom"><span class="status-dot"></span><span data-site-name>ソフトメディア研究会</span></div>
       </div>
-      <div class="hero-foot mono"><span>MADE BY STUDENTS. PLAYED BY YOU.</span><a href="#games">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a></div>
+      <div class="hero-foot"><span data-festival-name>津田沼祭 ゲーム作品展</span><a href="#games">作品一覧へ <span aria-hidden="true">↓</span></a></div>
     </section>
-    <div class="ticker" aria-hidden="true"><div>NEW GAME, NEW EXPERIENCE <span>✳</span> SMALL TEAM, BIG IDEAS <span>✳</span> JUST ONE MORE PLAY <span>✳</span> NEW GAME, NEW EXPERIENCE <span>✳</span> SMALL TEAM, BIG IDEAS <span>✳</span></div></div>
+    <div class="ticker" aria-hidden="true"><div><span data-festival-name>津田沼祭 ゲーム作品展</span><i>✳</i><span data-site-name>ソフトメディア研究会</span><i>✳</i><span data-festival-name>津田沼祭 ゲーム作品展</span><i>✳</i><span data-site-name>ソフトメディア研究会</span><i>✳</i><span data-festival-name>津田沼祭 ゲーム作品展</span></div></div>
     <section class="games-section container" id="games" aria-labelledby="games-title">
-      <div class="section-overline mono"><span><span class="section-index">01</span> THE LINEUP</span><span>FIND YOUR NEXT FAVORITE</span></div>
-      <div class="section-heading"><div><h2 id="games-title">さあ、どれで遊ぶ？<span class="game-total mono" id="game-total">03</span></h2><p>気になる作品をタップして、遊び方をチェック。</p></div><span class="section-arrow" aria-hidden="true">↙</span></div>
-      <div class="filter-row"><div class="filters" id="filters" role="group" aria-label="ジャンルで絞り込む"></div><p class="result-count mono" id="result-count" role="status" aria-live="polite"></p></div>
+      <div class="section-overline"><span><span class="section-index mono">01</span> 展示作品</span><p class="result-count" id="result-count" role="status" aria-live="polite"></p></div>
+      <div class="section-heading"><div><h2 id="games-title">作品一覧</h2><p>作品を選ぶと、概要と操作方法を確認できます。</p></div><span class="section-arrow" aria-hidden="true">↙</span></div>
+      <div class="filter-row"><div class="filters" id="filters" role="group" aria-label="ジャンルで絞り込む"></div></div>
       <div class="game-grid" id="game-grid"></div>
       <noscript><p class="notice">作品一覧の表示にはJavaScriptを有効にしてください。</p></noscript>
-      <div class="lineup-note"><span class="note-icon" aria-hidden="true">i</span><p>はじめてでも大丈夫。遊び方は各作品のページで確認できます。</p><span class="mono">PICK. PLAY. ENJOY.</span></div>
     </section>
     <section class="about-section" id="about" aria-labelledby="about-title"><div class="container about-inner">
       <div class="about-symbol" aria-hidden="true">✳</div>
-      <div class="about-copy"><p class="eyebrow">02 / BEHIND THE GAMES</p><h2 id="about-title">つくる楽しさを、<br>遊ぶ楽しさに。</h2><p>アイデアを出して、つくって、何度も試して。<br>ここに並ぶのは、学生たちの「好き」が詰まったゲームです。<br>あなたの「おもしろい！」が、次の作品のはじまりになります。</p></div>
-      <div class="exhibition-note"><span class="mono">HELLO, PLAYER!</span><span class="note-star" aria-hidden="true">↗</span><h3 data-festival-name>文化祭 ゲーム作品展</h3><p data-exhibition-message>気になることがあれば、<br>会場のスタッフに声をかけてください。</p><div class="sample-badge">サンプル作品を展示しています</div></div>
+      <div class="about-copy"><p class="eyebrow">02 / 展示案内</p><h2 id="about-title">展示について</h2><p data-exhibition-message>操作や展示について不明な点は、会場のスタッフにお尋ねください。</p></div>
+      <div class="exhibition-note"><span class="mono">展示情報</span><span class="note-star" aria-hidden="true">↗</span><h3 data-festival-name>津田沼祭 ゲーム作品展</h3><p data-site-name>ソフトメディア研究会</p><div class="sample-badge">現在掲載している作品はサンプルです。</div></div>
     </div></section>
   </main>
-  <footer class="site-footer container"><a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true"></span><span data-site-name>GAME LAB.</span></a><p>小さなアイデアから、新しい遊びを。</p><span class="mono" data-copyright>© 2026 GAME LAB.</span><a class="back-top" href="#" aria-label="ページの先頭へ">↑</a></footer>
+  <footer class="site-footer container"><a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true"></span><span data-site-name>ソフトメディア研究会</span></a><span class="mono" data-copyright>© 2026 ソフトメディア研究会</span><a class="back-top" href="#" aria-label="ページの先頭へ">↑</a></footer>
 </body>
 </html>

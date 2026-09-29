@@ -9,11 +9,23 @@
     } catch { return "./assets/images/placeholder.svg"; }
   };
   const site = window.EXHIBITION || {};
-  document.querySelectorAll("[data-site-name]").forEach(node => { node.textContent = site.name || "GAME LAB."; });
-  document.querySelectorAll("[data-site-edition]").forEach(node => { node.textContent = `${site.year || "2026"} EDITION`; });
+  const siteName = site.name || "ソフトメディア研究会";
+  document.querySelectorAll("[data-site-name]").forEach(node => { node.textContent = siteName; });
+  document.querySelectorAll("a.brand").forEach(node => { node.setAttribute("aria-label", `${siteName} トップページ`); });
+  document.querySelectorAll("[data-site-edition]").forEach(node => { node.textContent = `${site.year || "2026"}年`; });
+  document.querySelectorAll("[data-site-year]").forEach(node => { node.textContent = site.year || "2026"; });
   document.querySelectorAll("[data-festival-name]").forEach(node => { node.textContent = site.festivalName || "ゲーム作品展"; });
+  document.querySelectorAll("[data-festival-heading]").forEach(node => {
+    const [festival, ...title] = (site.festivalName || "ゲーム作品展").trim().split(/\s+/);
+    const lines = title.length ? [festival, title.join(" ")] : [festival];
+    node.replaceChildren(...lines.map(line => {
+      const span = document.createElement("span");
+      span.textContent = line;
+      return span;
+    }));
+  });
   document.querySelectorAll("[data-exhibition-message]").forEach(node => { node.textContent = site.message || ""; });
-  document.querySelectorAll("[data-copyright]").forEach(node => { node.textContent = `© ${site.year || "2026"} ${site.name || "GAME LAB."}`; });
+  document.querySelectorAll("[data-copyright]").forEach(node => { node.textContent = `© ${site.year || "2026"} ${siteName}`; });
   if (!site.sampleMode) document.querySelectorAll(".sample-badge").forEach(node => node.remove());
 
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");

@@ -48,7 +48,7 @@ fs.mkdirSync(out, { recursive: true });
     const expected = await page.locator('.game-card h3').nth(index).textContent();
     await page.locator('.game-card-link').nth(index).click();
     assert.equal(await page.locator('#game-title').textContent(), expected);
-    await page.getByRole('link', { name: 'GAME LIST', exact: true }).click();
+    await page.locator('.breadcrumb a').click();
     assert.equal(await page.locator('.game-card').count(), 3);
   }
   console.log('PASS: genre filters, persisted filters, every card and return link');
