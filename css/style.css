@@ -70,6 +70,28 @@ svg {
   display:block
 }
 
+/* Shared geometry avoids font- and emoji-dependent decorative symbols. */
+.icon-definitions {
+  position:absolute;
+  width:0;
+  height:0;
+  overflow:hidden;
+  pointer-events:none;
+}
+
+.asterisk-icon {
+  display:inline-block;
+  width:.8em;
+  height:.8em;
+  flex-shrink:0;
+  vertical-align:middle;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:3.2;
+  stroke-linecap:butt;
+  pointer-events:none;
+}
+
 h1,h2,h3,p {
   margin:0
 }
@@ -686,11 +708,10 @@ button:focus-visible,a:focus-visible,video:focus-visible,[tabindex]:focus-visibl
   margin-left:-30px
 }
 
-.ticker i {
+.ticker .asterisk-icon {
   font-size:22px;
   vertical-align:middle;
   margin:0 28px;
-  font-style:normal
 }
 
 .games-section {
@@ -1868,7 +1889,7 @@ button:focus-visible,a:focus-visible,video:focus-visible,[tabindex]:focus-visibl
   .ticker>div {
     font-size:12px
   }
-  .ticker i {
+  .ticker .asterisk-icon {
     margin:0 40px
   }
   .games-section {

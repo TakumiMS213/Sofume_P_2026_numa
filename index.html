@@ -14,6 +14,11 @@
   <script defer src="./js/controller.js"></script>
 </head>
 <body>
+  <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <defs>
+      <path id="asterisk-shape" d="M32 4v56M4 32h56M12.2 12.2l39.6 39.6M51.8 12.2L12.2 51.8"/>
+    </defs>
+  </svg>
   <div class="startup" id="startup" hidden aria-hidden="true">
     <div class="startup-stage">
       <div class="startup-orbit"></div>
@@ -46,7 +51,7 @@
       <div class="hero-art">
         <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div>
         <span class="art-cross cross-one" aria-hidden="true">+</span><span class="art-cross cross-two" aria-hidden="true">+</span>
-        <div class="art-label label-top" aria-hidden="true"><span class="mini-star">✳</span><span data-festival-name>津田沼祭 ゲーム作品展</span></div>
+        <div class="art-label label-top" aria-hidden="true"><svg class="asterisk-icon mini-star" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#asterisk-shape"/></svg><span data-festival-name>津田沼祭 ゲーム作品展</span></div>
         <div class="controller-wrap">
           <button class="controller controller-interactive" type="button" data-controller aria-label="ゲーム機を押す" aria-description="矢印キーで十字キー、EnterまたはSpaceで丸ボタンを押せます。">
             <span class="controller-topline" aria-hidden="true"><span data-site-name>ソフトメディア研究会</span><span>● ● ●</span></span>
@@ -56,12 +61,12 @@
             <span class="controller-caption" aria-hidden="true">GAME EXHIBITION</span>
           </button>
         </div>
-        <span class="art-spark" aria-hidden="true">✳</span><div class="play-token" aria-hidden="true"><span class="token-year" data-site-year>2026</span><span>作品展示</span></div>
+        <svg class="asterisk-icon art-spark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#asterisk-shape"/></svg><div class="play-token" aria-hidden="true"><span class="token-year" data-site-year>2026</span><span>作品展示</span></div>
         <div class="art-label label-bottom" aria-hidden="true"><span class="status-dot"></span><span data-site-name>ソフトメディア研究会</span></div>
       </div>
       <div class="hero-foot"><span data-festival-name>津田沼祭 ゲーム作品展</span><a href="#games">作品一覧へ <span aria-hidden="true">↓</span></a></div>
     </section>
-    <div class="ticker" aria-hidden="true"><div><span data-festival-name>津田沼祭 ゲーム作品展</span><i>✳</i><span data-site-name>ソフトメディア研究会</span><i>✳</i><span data-festival-name>津田沼祭 ゲーム作品展</span><i>✳</i><span data-site-name>ソフトメディア研究会</span><i>✳</i><span data-festival-name>津田沼祭 ゲーム作品展</span></div></div>
+    <div class="ticker" aria-hidden="true"><div><span data-festival-name>津田沼祭 ゲーム作品展</span><svg class="asterisk-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#asterisk-shape"/></svg><span data-site-name>ソフトメディア研究会</span><svg class="asterisk-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#asterisk-shape"/></svg><span data-festival-name>津田沼祭 ゲーム作品展</span><svg class="asterisk-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#asterisk-shape"/></svg><span data-site-name>ソフトメディア研究会</span><svg class="asterisk-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#asterisk-shape"/></svg><span data-festival-name>津田沼祭 ゲーム作品展</span></div></div>
     <section class="games-section container" id="games" aria-labelledby="games-title">
       <div class="section-overline"><span><span class="section-index mono">01</span> 展示作品</span><p class="result-count" id="result-count" role="status" aria-live="polite"></p></div>
       <div class="section-heading"><div><h2 id="games-title">作品一覧</h2><p>作品を選ぶと、概要と操作方法を確認できます。</p></div><span class="section-arrow" aria-hidden="true">↙</span></div>
@@ -70,7 +75,7 @@
       <noscript><p class="notice">作品一覧の表示にはJavaScriptを有効にしてください。</p></noscript>
     </section>
     <section class="about-section" id="about" aria-labelledby="about-title"><div class="container about-inner">
-      <div class="about-symbol" aria-hidden="true">✳</div>
+      <svg class="asterisk-icon about-symbol" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#asterisk-shape"/></svg>
       <div class="about-copy"><p class="eyebrow">02 / 展示案内</p><h2 id="about-title">展示について</h2><p data-exhibition-message>操作や展示について不明な点は、P班ブースのスタッフにお尋ねください。</p></div>
       <div class="exhibition-note"><span class="mono">展示情報</span><span class="note-star" aria-hidden="true">↗</span><h3 data-festival-name>津田沼祭 ゲーム作品展</h3><p data-site-name>ソフトメディア研究会</p><div class="sample-badge">現在掲載している作品はサンプルです。</div></div>
     </div></section>
