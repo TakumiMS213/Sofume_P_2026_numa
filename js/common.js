@@ -1,6 +1,9 @@
 (() => {
   "use strict";
   const escapeHTML = value => String(value ?? "").replace(/[&<>"']/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[char]);
+  // Keep older single-genre entries readable while new entries use tags.
+  const gameTags = game => [...new Set((Array.isArray(game.tags) ? game.tags : [game.genre])
+    .filter(tag => typeof tag === "string").map(tag => tag.trim()).filter(Boolean))];
   const mediaPath = value => {
     if (typeof value !== "string" || !value.trim()) return "./assets/images/placeholder.svg";
     try {
@@ -61,5 +64,5 @@
       target.src = "./assets/images/placeholder.svg";
     }
   }, true);
-  window.Site = { escapeHTML, mediaPath, observeReveal };
+  window.Site = { escapeHTML, mediaPath, observeReveal, gameTags };
 })();

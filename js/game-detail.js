@@ -1,6 +1,6 @@
 (() => {
   "use strict";
-  const { escapeHTML: esc, mediaPath, observeReveal } = window.Site;
+  const { escapeHTML: esc, mediaPath, observeReveal, gameTags } = window.Site;
   const games = window.GAMES || [];
   const game = games.find(item => item.id === new URLSearchParams(location.search).get("id"));
   const root = document.getElementById("game-detail");
@@ -11,13 +11,14 @@
   }
   document.title = `${game.title} — ${window.EXHIBITION.name}`;
   document.querySelector('meta[name="description"]').content = game.subtitle || game.title;
+  const tags = gameTags(game);
   const shots = game.screenshots || [];
   const controls = game.controls || [];
   const video = game.video;
   const validVideo = video && ((video.type === "local" && video.src) || (video.type === "youtube" && /^[\w-]{11}$/.test(video.id)));
-  const information = [["ジャンル", game.genre], ["プレイ人数", game.players], ["プレイ時間", game.playTime], ["対応機種", game.platform], ["制作者", Array.isArray(game.creators) ? game.creators.join(" / ") : game.creators], ["開発チーム", game.team]].filter(([, value]) => value);
+  const information = [["ジャンル・特徴", tags.join(" / ")], ["プレイ人数", game.players], ["プレイ時間", game.playTime], ["対応機種", game.platform], ["企画者", Array.isArray(game.creators) ? game.creators.join(" / ") : game.creators], ["開発チーム", game.team], ["ゲームカードへの収録", game.gameCard]].filter(([, value]) => value);
 
-  root.innerHTML = `<div class="container"><div class="breadcrumb"><a href="./index.html#games"><span aria-hidden="true">←</span> 作品一覧に戻る</a><span aria-hidden="true">/</span><span>${esc(game.title)}</span></div><section class="detail-hero" aria-labelledby="game-title"><div class="detail-art"><img src="${esc(mediaPath(game.icon))}" alt="${esc(game.iconAlt || game.title + 'のゲームアイコン')}" width="600" height="600" fetchpriority="high"></div><div class="detail-copy"><h1 id="game-title">${esc(game.title)}</h1>${game.subtitle ? `<p class="detail-subtitle">${esc(game.subtitle)}</p>` : ""}<div class="detail-badges">${[game.genre, game.players, game.playTime].filter(Boolean).map(item => `<span>${esc(item)}</span>`).join("")}</div>${controls.length ? '<a class="button button-green" href="#controls">操作方法を見る <span aria-hidden="true">↓</span></a>' : '<a class="button button-green" href="#overview">ゲーム概要 <span aria-hidden="true">↓</span></a>'}${window.EXHIBITION.sampleMode ? '<p class="sample-label">※ サンプル作品です。</p>' : ""}</div></section></div>
+  root.innerHTML = `<div class="container"><div class="breadcrumb"><a href="./index.html#games"><span aria-hidden="true">←</span> 作品一覧に戻る</a><span aria-hidden="true">/</span><span>${esc(game.title)}</span></div><section class="detail-hero" aria-labelledby="game-title"><div class="detail-art"><img src="${esc(mediaPath(game.icon))}" alt="${esc(game.iconAlt || game.title + 'のゲームアイコン')}" width="600" height="600" fetchpriority="high"></div><div class="detail-copy"><h1 id="game-title">${esc(game.title)}</h1>${game.subtitle ? `<p class="detail-subtitle">${esc(game.subtitle)}</p>` : ""}<div class="detail-badges">${[...tags, game.players, game.playTime].filter(Boolean).map(item => `<span>${esc(item)}</span>`).join("")}</div>${controls.length ? '<a class="button button-green" href="#controls">操作方法を見る <span aria-hidden="true">↓</span></a>' : '<a class="button button-green" href="#overview">ゲーム概要 <span aria-hidden="true">↓</span></a>'}${window.EXHIBITION.sampleMode ? '<p class="sample-label">※ サンプル作品です。</p>' : ""}</div></section></div>
     <nav class="detail-nav" aria-label="この作品のページ内ナビゲーション"><div class="container">${controls.length ? '<a href="#controls">操作方法</a>' : ""}<a href="#overview">ゲーム概要</a>${shots.length ? '<a href="#screenshots">スクリーンショット</a>' : ""}${validVideo ? '<a href="#video">動画</a>' : ""}</div></nav>
     <div class="detail-body container">
     ${controls.length ? `<section class="detail-section controls-section" id="controls"><h2>操作方法</h2><div class="device-tabs" role="tablist" aria-label="操作デバイス">${controls.map((control, i) => `<button type="button" class="device-tab" id="device-tab-${i}" role="tab" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}" aria-controls="device-panel-${i}" data-device="${i}">${esc(control.device)}</button>`).join("")}</div>${controls.map((control, i) => `<div id="device-panel-${i}" role="tabpanel" aria-labelledby="device-tab-${i}" tabindex="0"${i === 0 ? "" : " hidden"}>${(control.items || []).map(item => `<div class="control-row"><div class="control-keys">${(item.keys || []).map(key => `<kbd>${esc(key)}</kbd>`).join("")}</div><span class="control-action">${esc(item.action)}</span></div>`).join("")}</div>`).join("")}${game.tip ? `<p class="control-tip"><span aria-hidden="true">↳</span><span>${esc(game.tip)}</span></p>` : ""}</section>` : ""}

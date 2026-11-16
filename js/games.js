@@ -5,84 +5,548 @@ window.EXHIBITION = {
   year: "2026",
   festivalName: "津田沼祭 ゲーム作品展",
   message: "操作や展示について不明な点は、P班ブースのスタッフにお尋ねください。",
-  sampleMode: true,
+  sampleMode: false,
 };
 
+// 本提出の作品のみ掲載。照合元・表記変更は docs/submission-reconciliation.md を参照。
 window.GAMES = [
   {
-    id: "game01",
-    title: "MOSSBOUND",
-    subtitle: "森の遺跡を探索する2Dアクション",
-    icon: "./assets/images/games/mossbound.svg",
-    iconAlt: "光る森の遺跡にたたずむ、小さな白い旅人のイラスト",
-    description: "旅人を操作して森の遺跡を探索する2Dアクションゲームです。足場を飛び越えながら、光のかけらを集めます。",
-    genre: "アクション",
-    players: "1人",
-    playTime: "5〜10分",
-    platform: "Windows PC",
-    creators: ["ゲーム制作チーム A"],
-    team: "Team Moss",
-    accent: "#e3f1e7",
-    tip: "ジャンプ中も左右に移動できます。足場の端からジャンプしてください。",
-    controls: [
-      { device: "キーボード", items: [{ keys: ["A", "D", "←", "→"], action: "左右に移動" }, { keys: ["Space"], action: "ジャンプ" }, { keys: ["E"], action: "調べる・話しかける" }, { keys: ["Esc"], action: "ポーズ・メニュー" }] },
-      { device: "ゲームパッド", items: [{ keys: ["左スティック"], action: "左右に移動" }, { keys: ["A ボタン"], action: "ジャンプ" }, { keys: ["X ボタン"], action: "調べる・話しかける" }, { keys: ["Menu"], action: "ポーズ・メニュー" }] },
+    "id": "garagara",
+    "title": "身体組み替えアクション『ガラガラ』",
+    "subtitle": "",
+    "icon": "",
+    "iconAlt": "",
+    "description": "",
+    "tags": [
+      "アクション"
     ],
-    screenshots: [
-      { src: "./assets/images/games/mossbound-scene-1.svg", alt: "光る植物と大きな門がある、はじまりの森", caption: "森の探索画面" },
-      { src: "./assets/images/games/mossbound-scene-2.svg", alt: "水面に浮かぶ足場と、光のかけらがある遺跡", caption: "足場を使った移動" },
-      { src: "./assets/images/games/mossbound-scene-3.svg", alt: "大樹の前で輝く光を見つけた旅人", caption: "光のかけらの収集" },
+    "players": "",
+    "playTime": "",
+    "platform": "",
+    "creators": [
+      "フケフケ大明神"
     ],
-    video: { type: "local", src: "./assets/videos/mossbound-preview.mp4", poster: "./assets/images/games/mossbound-scene-1.svg", caption: "サンプル映像（6秒・音声なし）。オリジナルイラストによる展示イメージです。" },
+    "team": "",
+    "gameCard": "収録しない",
+    "tip": "",
+    "controls": [],
+    "screenshots": [],
+    "video": null
   },
   {
-    id: "game02",
-    title: "ORBIT SHIFT",
-    subtitle: "ステージを回転させて解く立体パズル",
-    icon: "./assets/images/games/orbit-shift.svg",
-    iconAlt: "紫の宇宙空間に浮かぶ、ミント色と白色の立方体のパズル",
-    description: "ステージを回転させて移動経路を探す立体パズルゲームです。ブロックのつながりを確認し、キューブをゴールまで移動させます。",
-    genre: "パズル",
-    players: "1人",
-    playTime: "3〜5分",
-    platform: "PC / スマートフォン",
-    creators: ["ゲーム制作チーム B"],
-    team: "Orbit Works",
-    accent: "#eeebf8",
-    tip: "移動経路が見つからない場合は、ステージを回転させて確認してください。手数の制限はありません。",
-    controls: [
-      { device: "マウス", items: [{ keys: ["ドラッグ"], action: "ステージを回転" }, { keys: ["左クリック"], action: "行き先のブロックを選ぶ" }, { keys: ["右クリック"], action: "ひとつ前に戻る" }] },
-      { device: "スマートフォン", items: [{ keys: ["スワイプ"], action: "ステージを回転" }, { keys: ["タップ"], action: "行き先のブロックを選ぶ" }, { keys: ["戻るボタン"], action: "ひとつ前に戻る" }] },
+    "id": "kaginawa-hisho",
+    "title": "鉤縄飛翔",
+    "subtitle": "",
+    "icon": "",
+    "iconAlt": "",
+    "description": "",
+    "tags": [
+      "アクション",
+      "2D",
+      "ソロプレイ"
     ],
-    screenshots: [
-      { src: "./assets/images/games/orbit-shift-scene-1.svg", alt: "星空に浮かぶ立体パズルの最初のステージ", caption: "最初のステージ" },
-      { src: "./assets/images/games/orbit-shift-scene-2.svg", alt: "離れた立方体をつないで進むパズルステージ", caption: "ブロックの移動経路" },
+    "players": "",
+    "playTime": "",
+    "platform": "",
+    "creators": [
+      "HarryNox"
     ],
-    video: null,
+    "team": "",
+    "gameCard": "収録する",
+    "tip": "",
+    "controls": [],
+    "screenshots": [],
+    "video": null
   },
   {
-    id: "game03",
-    title: "NEON DRIFT",
-    subtitle: "ドリフトでコースを走るレースゲーム",
-    icon: "./assets/images/games/neon-drift.svg",
-    iconAlt: "夕日の沈むネオンの街を走る、レトロなスポーツカーのイラスト",
-    description: "ドリフトを使ってコースを走るレースゲームです。1レースは約3分で、自己ベストの更新を目指します。",
-    genre: "レース",
-    players: "1人",
-    playTime: "約3分",
-    platform: "Windows PC",
-    creators: ["ゲーム制作チーム C"],
-    team: "Midnight Studio",
-    accent: "#f9e7ec",
-    tip: "カーブの手前からドリフトを始めると曲がりやすくなります。",
-    controls: [
-      { device: "キーボード", items: [{ keys: ["W", "↑"], action: "アクセル" }, { keys: ["S", "↓"], action: "ブレーキ" }, { keys: ["A", "D", "←", "→"], action: "ハンドル" }, { keys: ["Space"], action: "ドリフト" }, { keys: ["Esc"], action: "ポーズ・メニュー" }] },
-      { device: "ゲームパッド", items: [{ keys: ["RT"], action: "アクセル" }, { keys: ["LT"], action: "ブレーキ" }, { keys: ["左スティック"], action: "ハンドル" }, { keys: ["A ボタン"], action: "ドリフト" }, { keys: ["Menu"], action: "ポーズ・メニュー" }] },
+    "id": "memory-line-puzzle",
+    "title": "MemoryLinePuzzle",
+    "subtitle": "",
+    "icon": "",
+    "iconAlt": "",
+    "description": "",
+    "tags": [
+      "パズル",
+      "2D",
+      "ソロプレイ"
     ],
-    screenshots: [
-      { src: "./assets/images/games/neon-drift-scene-1.svg", alt: "夕日に向かって伸びるネオンシティの直線コース", caption: "直線コース" },
-      { src: "./assets/images/games/neon-drift-scene-2.svg", alt: "夜の高層ビルの間を駆け抜けるスポーツカー", caption: "街中のコース" },
+    "players": "",
+    "playTime": "",
+    "platform": "",
+    "creators": [
+      "HarryNox"
     ],
-    video: null,
+    "team": "",
+    "gameCard": "収録する",
+    "tip": "",
+    "controls": [],
+    "screenshots": [],
+    "video": null
   },
+  {
+    "id": "typing-rocket",
+    "title": "タイピング・ロケット",
+    "subtitle": "",
+    "icon": "",
+    "iconAlt": "",
+    "description": "",
+    "tags": [
+      "2D",
+      "ソロプレイ",
+      "タイピング"
+    ],
+    "players": "",
+    "playTime": "",
+    "platform": "",
+    "creators": [
+      "HarryNox"
+    ],
+    "team": "",
+    "gameCard": "収録する",
+    "tip": "",
+    "controls": [],
+    "screenshots": [],
+    "video": null
+  },
+  {
+    "id": "tori-wa-taberaretakunai",
+    "title": "鳥は食べられたくない",
+    "subtitle": "",
+    "icon": "",
+    "iconAlt": "",
+    "description": "",
+    "tags": [
+      "2D",
+      "ソロプレイ"
+    ],
+    "players": "",
+    "playTime": "",
+    "platform": "",
+    "creators": [
+      "ポンデコ"
+    ],
+    "team": "",
+    "gameCard": "収録する",
+    "tip": "",
+    "controls": [],
+    "screenshots": [],
+    "video": null
+  },
+  {
+    "id": "goodragshop",
+    "title": "Goodragshop",
+    "subtitle": "",
+    "icon": "",
+    "iconAlt": "",
+    "description": "",
+    "tags": [
+      "シミュレーション",
+      "2D",
+      "ソロプレイ"
+    ],
+    "players": "",
+    "playTime": "",
+    "platform": "",
+    "creators": [
+      "ten"
+    ],
+    "team": "",
+    "gameCard": "収録する",
+    "tip": "",
+    "controls": [],
+    "screenshots": [],
+    "video": null
+  },
+  {
+    "id": "danfall",
+    "title": "だんふぉ～る",
+    "subtitle": "",
+    "icon": "",
+    "iconAlt": "",
+    "description": "",
+    "tags": [
+      "パズル",
+      "2D",
+      "ソロプレイ"
+    ],
+    "players": "",
+    "playTime": "",
+    "platform": "",
+    "creators": [
+      "あんこ"
+    ],
+    "team": "",
+    "gameCard": "収録する",
+    "tip": "",
+    "controls": [],
+    "screenshots": [],
+    "video": null
+  },
+  {
+    "id": "confession-tower",
+    "title": "confession tower",
+    "subtitle": "",
+    "icon": "",
+    "iconAlt": "",
+    "description": "",
+    "tags": [
+      "シミュレーション",
+      "ソロプレイ"
+    ],
+    "players": "",
+    "playTime": "",
+    "platform": "",
+    "creators": [
+      "瑠璃"
+    ],
+    "team": "",
+    "gameCard": "収録する",
+    "tip": "",
+    "controls": [],
+    "screenshots": [],
+    "video": null
+  },
+  {
+    "id": "magnet-synapse",
+    "title": ".｡ﾟ+..ℳ𝒶𝑔𝓃ℯ𝓉 𝒮𝓎𝓃𝒶𝓅𝓈ℯ｡+..｡*ﾟ+",
+    "subtitle": "",
+    "icon": "",
+    "iconAlt": "",
+    "description": "",
+    "tags": [
+      "アクション",
+      "ホラー",
+      "2D",
+      "ソロプレイ"
+    ],
+    "players": "",
+    "playTime": "",
+    "platform": "",
+    "creators": [
+      "イヴ"
+    ],
+    "team": "",
+    "gameCard": "収録しない",
+    "tip": "",
+    "controls": [],
+    "screenshots": [],
+    "video": null
+  },
+  {
+    "id": "hasami-shogi",
+    "title": "挟将",
+    "subtitle": "",
+    "icon": "",
+    "iconAlt": "",
+    "description": "",
+    "tags": [
+      "パズル",
+      "ソロプレイ",
+      "マルチプレイ",
+      "対戦"
+    ],
+    "players": "",
+    "playTime": "",
+    "platform": "",
+    "creators": [
+      "るきは"
+    ],
+    "team": "",
+    "gameCard": "収録する",
+    "tip": "",
+    "controls": [],
+    "screenshots": [],
+    "video": null
+  },
+  {
+    "id": "star-shooting",
+    "title": "スターシューティング",
+    "subtitle": "",
+    "icon": "",
+    "iconAlt": "",
+    "description": "",
+    "tags": [
+      "シューティング",
+      "2D",
+      "ソロプレイ"
+    ],
+    "players": "",
+    "playTime": "",
+    "platform": "",
+    "creators": [
+      "ポンデコ"
+    ],
+    "team": "",
+    "gameCard": "収録しない",
+    "tip": "",
+    "controls": [],
+    "screenshots": [],
+    "video": null
+  },
+  {
+    "id": "phaselink",
+    "title": "PhaseLINK",
+    "subtitle": "",
+    "icon": "",
+    "iconAlt": "",
+    "description": "",
+    "tags": [
+      "リズム"
+    ],
+    "players": "",
+    "playTime": "",
+    "platform": "",
+    "creators": [
+      "yu"
+    ],
+    "team": "",
+    "gameCard": "収録する",
+    "tip": "",
+    "controls": [],
+    "screenshots": [],
+    "video": null
+  },
+  {
+    "id": "re-color",
+    "title": "RE:COLOR",
+    "subtitle": "",
+    "icon": "",
+    "iconAlt": "",
+    "description": "",
+    "tags": [
+      "シューティング",
+      "パズル",
+      "2D",
+      "ソロプレイ"
+    ],
+    "players": "",
+    "playTime": "",
+    "platform": "",
+    "creators": [
+      "おいも帝国(TOAH-Χ,Takumi,cone i7)"
+    ],
+    "team": "",
+    "gameCard": "収録する",
+    "tip": "",
+    "controls": [],
+    "screenshots": [],
+    "video": null
+  },
+  {
+    "id": "diva-player",
+    "title": "DIVA Player",
+    "subtitle": "",
+    "icon": "",
+    "iconAlt": "",
+    "description": "",
+    "tags": [
+      "ゲームではない"
+    ],
+    "players": "",
+    "playTime": "",
+    "platform": "",
+    "creators": [
+      "cone i7"
+    ],
+    "team": "",
+    "gameCard": "収録しない",
+    "tip": "",
+    "controls": [],
+    "screenshots": [],
+    "video": null
+  },
+  {
+    "id": "magical-neverland",
+    "title": "ぐるぐる？マジカル！？ねばーらんど",
+    "subtitle": "",
+    "icon": "",
+    "iconAlt": "",
+    "description": "",
+    "tags": [
+      "アクション",
+      "シューティング",
+      "RPG",
+      "2D",
+      "ソロプレイ"
+    ],
+    "players": "",
+    "playTime": "",
+    "platform": "",
+    "creators": [
+      "cone i7"
+    ],
+    "team": "",
+    "gameCard": "収録する",
+    "tip": "",
+    "controls": [],
+    "screenshots": [],
+    "video": null
+  },
+  {
+    "id": "gearcraft-recreated",
+    "title": "GearCraft:ReCreated",
+    "subtitle": "",
+    "icon": "",
+    "iconAlt": "",
+    "description": "",
+    "tags": [
+      "アクション",
+      "シューティング",
+      "2D",
+      "ソロプレイ",
+      "ローグライク"
+    ],
+    "players": "",
+    "playTime": "",
+    "platform": "",
+    "creators": [
+      "Takumi"
+    ],
+    "team": "",
+    "gameCard": "収録する",
+    "tip": "",
+    "controls": [],
+    "screenshots": [],
+    "video": null
+  },
+  {
+    "id": "sabotan",
+    "title": "サボたんっ！～IQ3,されど800db～",
+    "subtitle": "",
+    "icon": "",
+    "iconAlt": "",
+    "description": "",
+    "tags": [],
+    "players": "",
+    "playTime": "",
+    "platform": "",
+    "creators": [
+      "Takumi"
+    ],
+    "team": "",
+    "gameCard": "収録しない",
+    "tip": "",
+    "controls": [],
+    "screenshots": [],
+    "video": null
+  },
+  {
+    "id": "toritori-tataki",
+    "title": "トリトリ叩き",
+    "subtitle": "",
+    "icon": "",
+    "iconAlt": "",
+    "description": "",
+    "tags": [],
+    "players": "",
+    "playTime": "",
+    "platform": "",
+    "creators": [
+      "Takumi"
+    ],
+    "team": "",
+    "gameCard": "収録する",
+    "tip": "",
+    "controls": [],
+    "screenshots": [],
+    "video": null
+  },
+  {
+    "id": "palca-defector",
+    "title": "パルカディフェクタ",
+    "subtitle": "",
+    "icon": "",
+    "iconAlt": "",
+    "description": "",
+    "tags": [
+      "アクション",
+      "パズル",
+      "2D",
+      "ソロプレイ",
+      "協力"
+    ],
+    "players": "",
+    "playTime": "",
+    "platform": "",
+    "creators": [
+      "TOAH-Χ"
+    ],
+    "team": "",
+    "gameCard": "収録しない",
+    "tip": "",
+    "controls": [],
+    "screenshots": [],
+    "video": null
+  },
+  {
+    "id": "shitetu-kantai",
+    "title": "紫鉄艦隊",
+    "subtitle": "",
+    "icon": "",
+    "iconAlt": "",
+    "description": "",
+    "tags": [
+      "シミュレーション",
+      "ストラテジー",
+      "3D",
+      "ソロプレイ"
+    ],
+    "players": "",
+    "playTime": "",
+    "platform": "",
+    "creators": [
+      "ひしがた"
+    ],
+    "team": "",
+    "gameCard": "収録する",
+    "tip": "",
+    "controls": [],
+    "screenshots": [],
+    "video": null
+  },
+  {
+    "id": "final-boss",
+    "title": "FINAL BOSS",
+    "subtitle": "",
+    "icon": "",
+    "iconAlt": "",
+    "description": "",
+    "tags": [
+      "シューティング",
+      "2D"
+    ],
+    "players": "",
+    "playTime": "",
+    "platform": "",
+    "creators": [
+      "はやっぷ"
+    ],
+    "team": "",
+    "gameCard": "収録しない",
+    "tip": "",
+    "controls": [],
+    "screenshots": [],
+    "video": null
+  },
+  {
+    "id": "twinfront",
+    "title": "TwinFront",
+    "subtitle": "",
+    "icon": "",
+    "iconAlt": "",
+    "description": "",
+    "tags": [],
+    "players": "",
+    "playTime": "",
+    "platform": "",
+    "creators": [
+      "cone i7"
+    ],
+    "team": "",
+    "gameCard": "収録しない",
+    "tip": "",
+    "controls": [],
+    "screenshots": [],
+    "video": null
+  }
 ];

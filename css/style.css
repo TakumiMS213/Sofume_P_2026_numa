@@ -779,6 +779,12 @@ button:focus-visible,a:focus-visible,video:focus-visible,[tabindex]:focus-visibl
   line-height:1
 }
 
+.filter-help {
+  margin-top:20px;
+  color:var(--muted);
+  font-size:12px
+}
+
 .filter-row {
   display:flex;
   align-items:flex-start;
@@ -790,10 +796,13 @@ button:focus-visible,a:focus-visible,video:focus-visible,[tabindex]:focus-visibl
 .filters {
   display:flex;
   flex-wrap:wrap;
+  min-width:0;
   gap:7px
 }
 
 .filter-button {
+  max-width:100%;
+  overflow-wrap:anywhere;
   min-height:44px;
   padding:8px 15px;
   background:transparent;
@@ -862,10 +871,16 @@ button:focus-visible,a:focus-visible,video:focus-visible,[tabindex]:focus-visibl
   transition:transform .55s cubic-bezier(.2,.65,.3,1)
 }
 
-.card-genre {
-  position:absolute;
-  right:15px;
-  bottom:15px;
+.card-tags {
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-top:12px
+}
+
+.card-tags span {
+  max-width:100%;
+  overflow-wrap:anywhere;
   border-radius:20px;
   padding:4px 12px;
   background:#fafbf8f2;
@@ -1175,6 +1190,8 @@ button:focus-visible,a:focus-visible,video:focus-visible,[tabindex]:focus-visibl
 }
 
 .detail-badges span {
+  max-width:100%;
+  overflow-wrap:anywhere;
   border:1px solid #ccd2c6;
   border-radius:30px;
   font-size:11px;
