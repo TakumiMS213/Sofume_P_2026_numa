@@ -770,7 +770,7 @@ window.GAMES = [
     "playTime": "",
     "platform": "",
     "creators": [
-      "cone i7"
+      "いったん納豆のことを忘れてもいいと思います。(4DC2026 4班)"
     ],
     "team": "",
     "gameCard": "あり",
@@ -930,7 +930,7 @@ window.GAMES = [
     "playTime": "",
     "platform": "",
     "creators": [
-      "Takumi"
+      "サボtral800db特殊詐欺団（4DC2026 1班）"
     ],
     "team": "",
     "gameCard": "なし",
