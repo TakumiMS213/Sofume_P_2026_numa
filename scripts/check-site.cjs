@@ -64,6 +64,12 @@ fs.mkdirSync(out, { recursive: true });
         assert.equal(await page.locator('#video').count(), game.video ? 1 : 0);
         if (game.video) {
           assert.equal(await page.locator('video source').getAttribute('src'), game.video.src);
+          const fitsFrame = await page.locator('video').evaluate(video => {
+            const media = video.getBoundingClientRect();
+            const frame = video.parentElement.getBoundingClientRect();
+            return ['x', 'y', 'width', 'height'].every(key => Math.abs(media[key] - frame[key]) < 1);
+          });
+          assert(fitsFrame, `Video controls must fit inside the frame: ${game.id}/${width}px`);
           assert.equal(await page.locator('video').getAttribute('preload'), 'none');
           assert.equal(await page.locator('video').getAttribute('autoplay'), null);
           assert.equal(await page.locator('.detail-nav a[href="#video"]').count(), 1);
