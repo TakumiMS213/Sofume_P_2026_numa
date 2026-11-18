@@ -27,7 +27,7 @@ window.GAMES = [
       "フケフケ大明神"
     ],
     "team": "",
-    "gameCard": "収録しない",
+    "gameCard": "なし",
     "tip": "",
     "controls": [
       {
@@ -115,7 +115,7 @@ window.GAMES = [
       "HarryNox"
     ],
     "team": "",
-    "gameCard": "収録する",
+    "gameCard": "あり",
     "tip": "",
     "controls": [
       {
@@ -180,7 +180,7 @@ window.GAMES = [
       "HarryNox"
     ],
     "team": "",
-    "gameCard": "収録する",
+    "gameCard": "あり",
     "tip": "",
     "controls": [
       {
@@ -233,7 +233,7 @@ window.GAMES = [
       "HarryNox"
     ],
     "team": "",
-    "gameCard": "収録する",
+    "gameCard": "あり",
     "tip": "",
     "controls": [
       {
@@ -279,7 +279,7 @@ window.GAMES = [
       "ポンデコ"
     ],
     "team": "",
-    "gameCard": "収録する",
+    "gameCard": "あり",
     "tip": "",
     "controls": [
       {
@@ -331,7 +331,7 @@ window.GAMES = [
       "ten"
     ],
     "team": "",
-    "gameCard": "収録する",
+    "gameCard": "あり",
     "tip": "",
     "controls": [
       {
@@ -398,7 +398,7 @@ window.GAMES = [
       "あんこ"
     ],
     "team": "",
-    "gameCard": "収録する",
+    "gameCard": "あり",
     "tip": "",
     "controls": [],
     "screenshots": [],
@@ -422,7 +422,7 @@ window.GAMES = [
       "瑠璃"
     ],
     "team": "",
-    "gameCard": "収録する",
+    "gameCard": "あり",
     "tip": "",
     "controls": [
       {
@@ -469,7 +469,7 @@ window.GAMES = [
       "イヴ"
     ],
     "team": "",
-    "gameCard": "収録しない",
+    "gameCard": "なし",
     "tip": "ジャンプボタンはありません。右上の表示や主人公の色で現在の極を確認し、異なる極の引力と同じ極の反発を使いましょう。",
     "controls": [
       {
@@ -530,7 +530,7 @@ window.GAMES = [
       "るきは"
     ],
     "team": "",
-    "gameCard": "収録する",
+    "gameCard": "あり",
     "tip": "はじめての人は、ゲーム内メニューの「遊び方」から確認してください。",
     "controls": [
       {
@@ -621,7 +621,7 @@ window.GAMES = [
       "ポンデコ"
     ],
     "team": "",
-    "gameCard": "収録しない",
+    "gameCard": "なし",
     "tip": "",
     "controls": [],
     "screenshots": [],
@@ -644,7 +644,7 @@ window.GAMES = [
       "yu"
     ],
     "team": "",
-    "gameCard": "収録する",
+    "gameCard": "あり",
     "tip": "",
     "controls": [
       {
@@ -707,7 +707,7 @@ window.GAMES = [
       "おいも帝国(TOAH-Χ,Takumi,cone i7)"
     ],
     "team": "",
-    "gameCard": "収録する",
+    "gameCard": "あり",
     "tip": "",
     "controls": [],
     "screenshots": [],
@@ -730,7 +730,7 @@ window.GAMES = [
       "cone i7"
     ],
     "team": "",
-    "gameCard": "収録しない",
+    "gameCard": "なし",
     "tip": "",
     "controls": [],
     "screenshots": [],
@@ -757,7 +757,7 @@ window.GAMES = [
       "cone i7"
     ],
     "team": "",
-    "gameCard": "収録する",
+    "gameCard": "あり",
     "tip": "特定のスキル2種類をLv2にすると合成スキルを選べます。体験版は3層まで遊べます。",
     "controls": [
       {
@@ -841,7 +841,7 @@ window.GAMES = [
       "Takumi"
     ],
     "team": "",
-    "gameCard": "収録する",
+    "gameCard": "あり",
     "tip": "BOOSTを起動すると攻撃速度が上がります。",
     "controls": [
       {
@@ -909,7 +909,7 @@ window.GAMES = [
       "Takumi"
     ],
     "team": "",
-    "gameCard": "収録しない",
+    "gameCard": "なし",
     "tip": "",
     "controls": [],
     "screenshots": [],
@@ -930,7 +930,7 @@ window.GAMES = [
       "Takumi"
     ],
     "team": "",
-    "gameCard": "収録する",
+    "gameCard": "あり",
     "tip": "",
     "controls": [
       {
@@ -979,7 +979,7 @@ window.GAMES = [
       "TOAH-Χ"
     ],
     "team": "",
-    "gameCard": "収録しない",
+    "gameCard": "なし",
     "tip": "",
     "controls": [],
     "screenshots": [],
@@ -1005,7 +1005,7 @@ window.GAMES = [
       "ひしがた"
     ],
     "team": "",
-    "gameCard": "収録する",
+    "gameCard": "あり",
     "tip": "",
     "controls": [],
     "screenshots": [],
@@ -1029,7 +1029,7 @@ window.GAMES = [
       "はやっぷ"
     ],
     "team": "",
-    "gameCard": "収録しない",
+    "gameCard": "なし",
     "tip": "",
     "controls": [],
     "screenshots": [],
@@ -1050,7 +1050,7 @@ window.GAMES = [
       "cone i7"
     ],
     "team": "",
-    "gameCard": "収録しない",
+    "gameCard": "なし",
     "tip": "",
     "controls": [],
     "screenshots": [],
