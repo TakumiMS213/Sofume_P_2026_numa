@@ -60,7 +60,14 @@ fs.mkdirSync(out, { recursive: true });
         const icon = page.locator('.detail-art img');
         await icon.evaluate(image => image.decode());
         assert.equal(await icon.getAttribute('src'), game.icon || './assets/images/placeholder.svg');
-        assert.equal(await page.locator('.sample-label, #screenshots, #video').count(), 0);
+        assert.equal(await page.locator('.sample-label, #screenshots').count(), 0);
+        assert.equal(await page.locator('#video').count(), game.video ? 1 : 0);
+        if (game.video) {
+          assert.equal(await page.locator('video source').getAttribute('src'), game.video.src);
+          assert.equal(await page.locator('video').getAttribute('preload'), 'none');
+          assert.equal(await page.locator('video').getAttribute('autoplay'), null);
+          assert.equal(await page.locator('.detail-nav a[href="#video"]').count(), 1);
+        }
         await noOverflow(`published ${game.id} ${width}`);
       }
       console.log(`PASS: ${published.length} published details and list at ${width}px`);

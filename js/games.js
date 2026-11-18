@@ -155,7 +155,11 @@ window.GAMES = [
       }
     ],
     "screenshots": [],
-    "video": null,
+    "video": {
+      "type": "local",
+      "src": "./assets/videos/kaginawa-hisho.mp4",
+      "poster": "./assets/images/games/kaginawa-hisho.png"
+    },
     "inputDevices": [
       "キーボード",
       "マウス"
@@ -208,7 +212,11 @@ window.GAMES = [
       }
     ],
     "screenshots": [],
-    "video": null,
+    "video": {
+      "type": "local",
+      "src": "./assets/videos/memory-line-puzzle.mp4",
+      "poster": "./assets/images/games/memory-line-puzzle.png"
+    },
     "inputDevices": [
       "マウス",
       "キーボード"
@@ -255,7 +263,11 @@ window.GAMES = [
       }
     ],
     "screenshots": [],
-    "video": null,
+    "video": {
+      "type": "local",
+      "src": "./assets/videos/typing-rocket.mp4",
+      "poster": "./assets/images/games/typing-rocket.png"
+    },
     "inputDevices": [
       "キーボード",
       "マウス"
@@ -504,7 +516,11 @@ window.GAMES = [
       }
     ],
     "screenshots": [],
-    "video": null,
+    "video": {
+      "type": "local",
+      "src": "./assets/videos/magnet-synapse.mp4",
+      "poster": "./assets/images/games/magnet-synapse.png"
+    },
     "inputDevices": [
       "キーボード",
       "マウス"
@@ -814,7 +830,11 @@ window.GAMES = [
       }
     ],
     "screenshots": [],
-    "video": null,
+    "video": {
+      "type": "local",
+      "src": "./assets/videos/magical-neverland.mp4",
+      "poster": "./assets/images/games/magical-neverland.gif"
+    },
     "inputDevices": [
       "キーボード",
       "マウス"
@@ -888,7 +908,11 @@ window.GAMES = [
       }
     ],
     "screenshots": [],
-    "video": null,
+    "video": {
+      "type": "local",
+      "src": "./assets/videos/gearcraft-recreated.mp4",
+      "poster": "./assets/images/games/gearcraft-recreated.jpg"
+    },
     "inputDevices": [
       "キーボード",
       "マウス"
