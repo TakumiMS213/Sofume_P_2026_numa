@@ -478,7 +478,7 @@ window.GAMES = [
     "playTime": "",
     "platform": "",
     "creators": [
-      "イヴ"
+      "✧‧˚⌖.° 石 ✧‧˚⌖.°（4DC2026Summer 4班）"
     ],
     "team": "",
     "gameCard": "なし",
@@ -770,7 +770,7 @@ window.GAMES = [
     "playTime": "",
     "platform": "",
     "creators": [
-      "いったん納豆のことを忘れてもいいと思います。(4DC2026 4班)"
+      "いったん納豆のことを忘れてもいいと思います。(4DC2026Summer 4班)"
     ],
     "team": "",
     "gameCard": "あり",
@@ -930,7 +930,7 @@ window.GAMES = [
     "playTime": "",
     "platform": "",
     "creators": [
-      "サボtral800db特殊詐欺団（4DC2026 1班）"
+      "サボtral800db特殊詐欺団（4DC2026Summer 1班）"
     ],
     "team": "",
     "gameCard": "なし",
