@@ -918,6 +918,14 @@ button:focus-visible,a:focus-visible,video:focus-visible,[tabindex]:focus-visibl
   transition:background .2s,transform .2s
 }
 
+.card-creators {
+  margin-top:8px;
+  font-size:12px;
+  line-height:1.6;
+  color:var(--muted);
+  overflow-wrap:anywhere
+}
+
 .card-subtitle {
   font-size:12px;
   margin-top:3px;
