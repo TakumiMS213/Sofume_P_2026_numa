@@ -44,8 +44,23 @@ fs.mkdirSync(out, { recursive: true });
         const info = await page.locator('.game-info').textContent();
         assert(info.includes(game.creators.join(' / ')), `Planner: ${game.id}`);
         assert(info.includes(game.gameCard), `Game card: ${game.id}`);
-        assert.deepEqual(await page.locator('.detail-badges span').allTextContents(), game.tags);
-        assert.equal(await page.locator('.sample-label, #controls, #screenshots, #video').count(), 0);
+        assert.deepEqual(await page.locator('.detail-badges span').allTextContents(), [...game.tags, game.players, game.playTime].filter(Boolean));
+        assert.equal(await page.locator('.description-text').textContent(), game.description);
+        assert.equal(await page.locator('#controls').count(), game.controls.length ? 1 : 0);
+        assert.equal(await page.locator('a[href$=".pdf"], .manual-link').count(), 0, 'Reference PDFs must not be published');
+        if (game.inputDevices?.length) assert(info.includes(game.inputDevices.join(' / ')), `Input devices: ${game.id}`);
+
+        for (const [index, control] of game.controls.entries()) {
+          await page.locator(`[data-device="${index}"]`).click();
+          const panel = page.locator(`#device-panel-${index}`);
+          assert(await panel.isVisible(), `Control panel: ${game.id}/${index}`);
+          assert.deepEqual(await panel.locator('.control-action').allTextContents(), control.items.map(item => item.action));
+          assert.deepEqual(await panel.locator('kbd').allTextContents(), control.items.flatMap(item => item.keys));
+        }
+        const icon = page.locator('.detail-art img');
+        await icon.evaluate(image => image.decode());
+        assert.equal(await icon.getAttribute('src'), game.icon || './assets/images/placeholder.svg');
+        assert.equal(await page.locator('.sample-label, #screenshots, #video').count(), 0);
         await noOverflow(`published ${game.id} ${width}`);
       }
       console.log(`PASS: ${published.length} published details and list at ${width}px`);
@@ -69,6 +84,12 @@ fs.mkdirSync(out, { recursive: true });
     await visit(`game.html?id=${published[0].id}`);
     await page.screenshot({ path: path.join(out, 'submissions-detail-mobile.png'), fullPage: true });
     console.log('PASS: published tag filters and WCAG A/AA on every published page');
+  }
+  if (process.argv.includes('--published-only')) {
+    assert.deepEqual(errors, [], 'Uncaught JavaScript errors');
+    assert.deepEqual(broken, [], 'Broken resource requests');
+    await browser.close();
+    return;
   }
 
   // Keep feature regression checks independent of which works have submitted media.
