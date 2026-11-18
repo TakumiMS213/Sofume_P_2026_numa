@@ -21,9 +21,9 @@
   });
   document.querySelectorAll("[data-site-edition]").forEach(node => { node.textContent = `${site.year || "2026"}年`; });
   document.querySelectorAll("[data-site-year]").forEach(node => { node.textContent = site.year || "2026"; });
-  document.querySelectorAll("[data-festival-name]").forEach(node => { node.textContent = site.festivalName || "作品展"; });
+  document.querySelectorAll("[data-festival-name]").forEach(node => { node.textContent = site.festivalName || "P班作品展示"; });
   document.querySelectorAll("[data-festival-heading]").forEach(node => {
-    const [festival, ...title] = (site.festivalName || "作品展").trim().split(/\s+/);
+    const [festival, ...title] = (site.festivalName || "P班作品展示").trim().split(/\s+/);
     const lines = title.length ? [festival, title.join(" ")] : [festival];
     node.replaceChildren(...lines.map(line => {
       const span = document.createElement("span");
