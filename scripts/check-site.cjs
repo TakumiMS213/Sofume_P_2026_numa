@@ -14,7 +14,7 @@ fs.mkdirSync(out, { recursive: true });
   const context = await browser.newContext({ reducedMotion: 'reduce' });
   // Chrome can abort cross-document transitions during automated navigation.
   // Disable only that visual effect in the reduced-motion QA context.
-  await context.route('**/css/style.css', async route => {
+  await context.route('**/css/style.css*', async route => {
     const response = await route.fetch();
     await route.fulfill({ response, body: await response.text() + '\n@view-transition { navigation: none; }\n' });
   });
@@ -101,7 +101,7 @@ fs.mkdirSync(out, { recursive: true });
 
   // Keep feature regression checks independent of which works have submitted media.
   const sampleSource = fs.readFileSync(path.join(__dirname, 'fixtures/sample-games.js'), 'utf8');
-  await page.route('**/js/games.js', route => route.fulfill({ contentType: 'text/javascript', body: sampleSource }));
+  await page.route('**/js/games.js*', route => route.fulfill({ contentType: 'text/javascript', body: sampleSource }));
 
   for (const width of [320, 375, 390, 430, 768, 1440]) {
     await page.setViewportSize({ width, height: 960 });
@@ -231,7 +231,7 @@ fs.mkdirSync(out, { recursive: true });
   const fixtures = await context.newPage();
   const source = sampleSource;
   let mutation = '';
-  await fixtures.route('**/js/games.js', route => route.fulfill({ contentType: 'text/javascript', body: source + '\n' + mutation }));
+  await fixtures.route('**/js/games.js*', route => route.fulfill({ contentType: 'text/javascript', body: source + '\n' + mutation }));
   mutation = 'window.GAMES[0].tags = [" アクション ", "アクション", "", null, 42, "<b>独自タグ</b>"]; delete window.GAMES[1].tags; window.GAMES[1].genre = "旧ジャンル"; window.GAMES[2].tags = [];';
   await fixtures.goto(base + 'index.html');
   assert.deepEqual(await fixtures.locator('.game-card').first().locator('.card-tags span').allTextContents(), ['アクション', '<b>独自タグ</b>']);
@@ -280,7 +280,7 @@ fs.mkdirSync(out, { recursive: true });
 
   const touchContext = await browser.newContext({ viewport: {width: 390, height: 844}, hasTouch: true, isMobile: true, reducedMotion: 'reduce' });
   const touch = await touchContext.newPage();
-  await touch.route('**/js/games.js', route => route.fulfill({ contentType: 'text/javascript', body: sampleSource }));
+  await touch.route('**/js/games.js*', route => route.fulfill({ contentType: 'text/javascript', body: sampleSource }));
   await touch.goto(base + 'index.html');
   await touch.locator('.game-card-link').first().tap();
   assert.equal(await touch.locator('#game-title').textContent(), 'MOSSBOUND');
