@@ -277,8 +277,8 @@ window.GAMES = [
     "id": "tori-wa-taberaretakunai",
     "title": "鳥は食べられたくない",
     "subtitle": "",
-    "icon": "",
-    "iconAlt": "",
+    "icon": "./assets/images/games/tori-wa-taberaretakunai.png",
+    "iconAlt": "鳥は食べられたくないの作品アイコン",
     "description": "火や箸などが上から落ちてくるものを避ける\n3分間頑張って生き残るゲーム\n最初はひよこだが、落ちてきたものに5回当たるとニワトリに成長する。\n唐揚げにならないように生き残る",
     "tags": [
       "2D",
@@ -319,7 +319,12 @@ window.GAMES = [
       }
     ],
     "screenshots": [],
-    "video": null,
+    "video": {
+      "type": "local",
+      "src": "./assets/videos/tori-wa-taberaretakunai.mp4",
+      "poster": "./assets/images/games/tori-wa-taberaretakunai.png",
+      "caption": ""
+    },
     "inputDevices": [
       "キーボード"
     ]
@@ -328,8 +333,8 @@ window.GAMES = [
     "id": "goodragshop",
     "title": "Goodragshop",
     "subtitle": "",
-    "icon": "",
-    "iconAlt": "",
+    "icon": "./assets/images/games/goodragshop.png",
+    "iconAlt": "Goodragshopの作品アイコン",
     "description": "債務者による平和な農業シミュレーションゲーム。\nプレイヤーは植物を育て、売り捌き借金完済を目指します。栽培物が売れ残った場合は、\nご自身で処理していただくだけの簡単なお仕事です。\n警察による嫌疑を躱す必要があります。また作物処理による副作用に関して責任を負いま\nせん。\n\n\nゲームの流れ\n種を購入→栽培→売る→１日の終わりにその日の返済と証拠隠滅→完済まで繰り返す",
     "tags": [
       "シミュレーション",
@@ -385,7 +390,12 @@ window.GAMES = [
       }
     ],
     "screenshots": [],
-    "video": null,
+    "video": {
+      "type": "local",
+      "src": "./assets/videos/goodragshop.mp4",
+      "poster": "./assets/images/games/goodragshop.png",
+      "caption": ""
+    },
     "inputDevices": [
       "マウス",
       "キーボード"
@@ -395,9 +405,9 @@ window.GAMES = [
     "id": "danfall",
     "title": "だんふぉ～る",
     "subtitle": "",
-    "icon": "",
-    "iconAlt": "",
-    "description": "",
+    "icon": "./assets/images/games/danfall.png",
+    "iconAlt": "だんふぉ～るの作品アイコン",
+    "description": "段ボールを積むだけの簡単なアルバイトです♪\n物流センターでアルバイトをすることになったあなた。お仕事は段ボールを積み上げる\nだけの簡単なお仕事らしいが……？\n早く、きれいに、たくさん段ボールを積み上げよう。目指せ最高売り上げ！\nただし、段ボールは落とさないように気を付けてね。\n\n制限時間内に段ボールを積んだ数を競う、一人用パズルゲームです。\nリザルト画面ではランキングが表示されるので、是非一位を狙ってみてください！",
     "tags": [
       "パズル",
       "2D",
@@ -412,16 +422,56 @@ window.GAMES = [
     "team": "",
     "gameCard": "あり",
     "tip": "",
-    "controls": [],
+    "controls": [
+      {
+        "device": "キーボード・マウス",
+        "items": [
+          {
+            "keys": [
+              "マウス"
+            ],
+            "action": "選択（タイトル・ストーリー・リザルトシーン）"
+          },
+          {
+            "keys": [
+              "←",
+              "→"
+            ],
+            "action": "段ボールの移動"
+          },
+          {
+            "keys": [
+              "Space"
+            ],
+            "action": "段ボールを落とす"
+          },
+          {
+            "keys": [
+              "Esc"
+            ],
+            "action": "ゲームの終了"
+          }
+        ]
+      }
+    ],
     "screenshots": [],
-    "video": null
+    "video": {
+      "type": "local",
+      "src": "./assets/videos/danfall.mp4",
+      "poster": "./assets/images/games/danfall.png",
+      "caption": ""
+    },
+    "inputDevices": [
+      "キーボード",
+      "マウス"
+    ]
   },
   {
     "id": "confession-tower",
     "title": "confession tower",
     "subtitle": "",
-    "icon": "",
-    "iconAlt": "",
+    "icon": "./assets/images/games/confession-tower.png",
+    "iconAlt": "confession towerの作品アイコン",
     "description": "1/3の確率をあててどんどん階層（告白成功の人数）をあげ倍率を上げていくシミュレーショ\nン？ゲーム\n\n\nゲームの流れ\n最初の説明文を読む→スタートボタン（いざ、尋常に勝負！）を押す→貢ぎ額を設定しス\nタートを押す→1pplから好きなボタンを押していく→途中で終わりたければキャッシュアウト\nボタンを押し、最終階層までいければ貢ぎ額が倍で返ってくる。",
     "tags": [
       "シミュレーション",
@@ -456,7 +506,12 @@ window.GAMES = [
       }
     ],
     "screenshots": [],
-    "video": null,
+    "video": {
+      "type": "local",
+      "src": "./assets/videos/confession-tower.mp4",
+      "poster": "./assets/images/games/confession-tower.png",
+      "caption": ""
+    },
     "inputDevices": [
       "マウス"
     ]
@@ -530,8 +585,8 @@ window.GAMES = [
     "id": "hasami-shogi",
     "title": "挟将",
     "subtitle": "",
-    "icon": "",
-    "iconAlt": "",
+    "icon": "./assets/images/games/hasami-shogi.png",
+    "iconAlt": "挟将の作品アイコン",
     "description": "◎コンセプト\nリバーシの盤で駒を挟み合う二人対戦ボードゲームです。挟んで裏返した相手の駒の数字がダメ\nージになり、相手の体力（先手136・後手134）を先に0 にした方が勝ちです。対局の前に配ら\nれた3 枚のスキルカードから1 枚を選び、ゲージが満タンになるたびに使えます。\nCPU 対戦（イージー／ノーマル／ハード）のほか、勝ち続けるほどCPU が強くなる「エンドレ\nス」で連勝数のランキングに挑めます。友だちとは同じ端末の2 人対戦か、招待リンクでのオン\nライン対戦で遊べます。\n遊ぶ：https://kyosho.rukiharukichi.com/\n＊はじめての人はメニューの「遊び方」から＊",
     "tags": [
       "パズル",
@@ -611,7 +666,12 @@ window.GAMES = [
       }
     ],
     "screenshots": [],
-    "video": null,
+    "video": {
+      "type": "local",
+      "src": "./assets/videos/hasami-shogi.mp4",
+      "poster": "./assets/images/games/hasami-shogi.png",
+      "caption": ""
+    },
     "inputDevices": [
       "マウス",
       "タッチ",
@@ -622,9 +682,9 @@ window.GAMES = [
     "id": "star-shooting",
     "title": "スターシューティング",
     "subtitle": "",
-    "icon": "",
-    "iconAlt": "",
-    "description": "",
+    "icon": "./assets/images/games/star-shooting.png",
+    "iconAlt": "スターシューティングの作品アイコン",
+    "description": "敵の弾を避けて全部倒す\n敵の弾に3回当たったらゲームオーバー\n発射する弾がなくなったら自動でリロードされるが気を付けて敵をやっつけていく",
     "tags": [
       "シューティング",
       "2D",
@@ -639,9 +699,42 @@ window.GAMES = [
     "team": "",
     "gameCard": "なし",
     "tip": "",
-    "controls": [],
+    "controls": [
+      {
+        "device": "キーボード・マウス",
+        "items": [
+          {
+            "keys": [
+              "左クリック"
+            ],
+            "action": "弾発射"
+          },
+          {
+            "keys": [
+              "マウス移動"
+            ],
+            "action": "移動"
+          },
+          {
+            "keys": [
+              "Esc"
+            ],
+            "action": "ゲームの終了"
+          }
+        ]
+      }
+    ],
     "screenshots": [],
-    "video": null
+    "video": {
+      "type": "local",
+      "src": "./assets/videos/star-shooting.mp4",
+      "poster": "./assets/images/games/star-shooting.png",
+      "caption": ""
+    },
+    "inputDevices": [
+      "キーボード",
+      "マウス"
+    ]
   },
   {
     "id": "phaselink",
@@ -707,9 +800,9 @@ window.GAMES = [
     "id": "re-color",
     "title": "RE:COLOR",
     "subtitle": "",
-    "icon": "",
-    "iconAlt": "",
-    "description": "",
+    "icon": "./assets/images/games/re-color.gif",
+    "iconAlt": "RE:COLORの作品アイコン",
+    "description": "色付きの壁に弾丸を跳ね返らせると、弾丸がその色になります。​\n跳ね返らせた色付きの弾丸を敵に当てると、同じ色の敵を倒せます。\n​\nタイトル画面でRキーを押すと、隠しモード【スコアアタック】をプレイできます。",
     "tags": [
       "シューティング",
       "パズル",
@@ -725,17 +818,50 @@ window.GAMES = [
     "team": "",
     "gameCard": "あり",
     "tip": "",
-    "controls": [],
+    "controls": [
+      {
+        "device": "キーボード・マウス",
+        "items": [
+          {
+            "keys": [
+              "左クリック"
+            ],
+            "action": "選択"
+          },
+          {
+            "keys": [
+              "左クリックを押しながらドラッグ"
+            ],
+            "action": "向き変更"
+          },
+          {
+            "keys": [
+              "R"
+            ],
+            "action": "隠しモード【スコアアタック】をプレイ（タイトル画面）"
+          }
+        ]
+      }
+    ],
     "screenshots": [],
-    "video": null
+    "video": {
+      "type": "local",
+      "src": "./assets/videos/re-color.mp4",
+      "poster": "./assets/images/games/re-color.gif",
+      "caption": ""
+    },
+    "inputDevices": [
+      "キーボード",
+      "マウス"
+    ]
   },
   {
     "id": "diva-player",
     "title": "DIVA Player",
     "subtitle": "",
-    "icon": "",
-    "iconAlt": "",
-    "description": "",
+    "icon": "./assets/images/games/diva-player.png",
+    "iconAlt": "DIVA Playerの作品アイコン",
+    "description": "ボカロ曲を探して聴くための音楽プレイヤーです。曲のデータは VocaDB から取っていま\nす。YouTube・ニコニコ動画・SoundCloud・Bilibili にある曲をまとめて検索し、その場で再生\nできます。\n検索では曲名やP名、歌い手のほか、タグ・再生数・BPM・楽器・歌詞の一部でも絞り込めま\nす。聴いた曲に星で評価を付けると、好みに近い曲がおすすめに並びます。\n「サビ発掘」はサビの候補を15秒ずつ続けて流すモードです。気に入った曲はその場で保\n存できます。「曲調マップ」は、音の特徴が似た曲どうしを近くに並べた地図です。知ってい\nる曲の周りから新しい曲を探せます。\nプレイリストやフォルダーで曲を整理できます。YouTube の公開プレイリストや、ニコニコ動\n画のマイリストも取り込めます。\n・使い方の流れ：\n検索する → 再生する → 星を付ける → おすすめから次の曲へ",
     "tags": [
       "ゲームではない"
     ],
@@ -748,9 +874,80 @@ window.GAMES = [
     "team": "",
     "gameCard": "なし",
     "tip": "",
-    "controls": [],
+    "controls": [
+      {
+        "device": "キーボード・マウス",
+        "items": [
+          {
+            "keys": [
+              "左クリック"
+            ],
+            "action": "曲を再生する・ボタンを押す"
+          },
+          {
+            "keys": [
+              "/"
+            ],
+            "action": "検索"
+          },
+          {
+            "keys": [
+              "Space"
+            ],
+            "action": "再生／一時停止"
+          },
+          {
+            "keys": [
+              "←",
+              "→"
+            ],
+            "action": "5秒戻る／進む"
+          },
+          {
+            "keys": [
+              "Shift ＋ ←",
+              "Shift ＋ →"
+            ],
+            "action": "前の曲／次の曲"
+          },
+          {
+            "keys": [
+              "M"
+            ],
+            "action": "ミュート"
+          },
+          {
+            "keys": [
+              "Ctrl ＋ Z"
+            ],
+            "action": "元に戻す"
+          },
+          {
+            "keys": [
+              "?"
+            ],
+            "action": "ショートカットの一覧"
+          },
+          {
+            "keys": [
+              "Esc"
+            ],
+            "action": "開いている画面を閉じる"
+          }
+        ]
+      }
+    ],
     "screenshots": [],
-    "video": null
+    "video": {
+      "type": "local",
+      "src": "./assets/videos/diva-player.mp4",
+      "poster": "./assets/images/games/diva-player.png",
+      "caption": ""
+    },
+    "inputDevices": [
+      "キーボード",
+      "マウス"
+    ]
   },
   {
     "id": "magical-neverland",
@@ -922,9 +1119,9 @@ window.GAMES = [
     "id": "sabotan",
     "title": "サボたんっ！～IQ3,されど800db～",
     "subtitle": "",
-    "icon": "",
-    "iconAlt": "",
-    "description": "",
+    "icon": "./assets/images/games/sabotan.png",
+    "iconAlt": "サボたんっ！～IQ3,されど800db～の作品アイコン",
+    "description": "ロボットサボテン探偵「サボたん」になって、Astral博士殺害事件の真相を追う2D推理アク\nションゲーム！\nサボたんは、shiftキーと様々なキーを組み合わせることで、いろいろな動きをするぞ！\n事件の真相と、サボたんの可愛さに注目！！",
     "tags": [],
     "players": "",
     "playTime": "",
@@ -935,16 +1132,88 @@ window.GAMES = [
     "team": "",
     "gameCard": "なし",
     "tip": "",
-    "controls": [],
+    "controls": [
+      {
+        "device": "キーボード・マウス",
+        "items": [
+          {
+            "keys": [
+              "A / D",
+              "← / →"
+            ],
+            "action": "左右移動"
+          },
+          {
+            "keys": [
+              "S",
+              "↓"
+            ],
+            "action": "人物に話しかける・調べる"
+          },
+          {
+            "keys": [
+              "Space"
+            ],
+            "action": "ジャンプ"
+          },
+          {
+            "keys": [
+              "Esc"
+            ],
+            "action": "メニュー"
+          },
+          {
+            "keys": [
+              "Shift ＋ E"
+            ],
+            "action": "トゲ飛ばし（もう一度Shift、またはShift＋Eで照準にトゲ発射）"
+          },
+          {
+            "keys": [
+              "壁に向かってShift"
+            ],
+            "action": "壁張り付き"
+          },
+          {
+            "keys": [
+              "Shift ＋ 左右移動キー"
+            ],
+            "action": "ローリング"
+          },
+          {
+            "keys": [
+              "Shift ＋ ↑",
+              "Shift ＋ W"
+            ],
+            "action": "ロケット（普段のジャンプより高く飛ぶ。左右移動はできない）"
+          },
+          {
+            "keys": [
+              "Shift ＋ R"
+            ],
+            "action": "タイムLUUP（事件前の過去に移動）"
+          }
+        ]
+      }
+    ],
     "screenshots": [],
-    "video": null
+    "video": {
+      "type": "local",
+      "src": "./assets/videos/sabotan.mp4",
+      "poster": "./assets/images/games/sabotan.png",
+      "caption": ""
+    },
+    "inputDevices": [
+      "キーボード",
+      "マウス"
+    ]
   },
   {
     "id": "toritori-tataki",
     "title": "トリトリ叩き",
     "subtitle": "",
-    "icon": "",
-    "iconAlt": "",
+    "icon": "./assets/images/games/toritori-tataki.png",
+    "iconAlt": "トリトリ叩きの作品アイコン",
     "description": "鶏に似た謎の生物「トリトリ」をぶっ叩くモグラ叩き系ミニゲーム\n\n高いスコアを取ると、トリトリが褒めてくれるかも！？",
     "tags": [],
     "players": "",
@@ -976,7 +1245,12 @@ window.GAMES = [
       }
     ],
     "screenshots": [],
-    "video": null,
+    "video": {
+      "type": "local",
+      "src": "./assets/videos/toritori-tataki.mp4",
+      "poster": "./assets/images/games/toritori-tataki.png",
+      "caption": ""
+    },
     "inputDevices": [
       "マウス",
       "キーボード"
@@ -986,9 +1260,9 @@ window.GAMES = [
     "id": "palca-defector",
     "title": "パルカディフェクタ",
     "subtitle": "",
-    "icon": "",
-    "iconAlt": "",
-    "description": "",
+    "icon": "./assets/images/games/palca-defector.png",
+    "iconAlt": "パルカディフェクタの作品アイコン",
+    "description": "◎コンセプト\n新たな生命が紡がれなくなった世界で生きる一人の少女。\nある時から少女には影がつくようになり、影に対する2つの権能が扱えるように。\n権能を組み合わせて往時の世界を探索しましょう。",
     "tags": [
       "アクション",
       "パズル",
@@ -1005,17 +1279,75 @@ window.GAMES = [
     "team": "",
     "gameCard": "なし",
     "tip": "",
-    "controls": [],
+    "controls": [
+      {
+        "device": "キーボード・マウス",
+        "items": [
+          {
+            "keys": [
+              "A",
+              "D"
+            ],
+            "action": "左右移動"
+          },
+          {
+            "keys": [
+              "Space"
+            ],
+            "action": "ジャンプ"
+          },
+          {
+            "keys": [
+              "Q"
+            ],
+            "action": "「解放（静止状態）」（クールタイム：5秒）"
+          },
+          {
+            "keys": [
+              "A / D ＋ Q"
+            ],
+            "action": "「解放（慣性移動付与）」（クールタイム：5秒）"
+          },
+          {
+            "keys": [
+              "E"
+            ],
+            "action": "「新生」（クールタイム：1秒）"
+          },
+          {
+            "keys": [
+              "左クリック"
+            ],
+            "action": "ボタンを押すなど"
+          },
+          {
+            "keys": [
+              "Esc"
+            ],
+            "action": "ゲームの終了"
+          }
+        ]
+      }
+    ],
     "screenshots": [],
-    "video": null
+    "video": {
+      "type": "local",
+      "src": "./assets/videos/palca-defector.mp4",
+      "poster": "./assets/images/games/palca-defector.png",
+      "caption": ""
+    },
+    "inputDevices": [
+      "キーボード",
+      "マウス"
+    ]
   },
   {
     "id": "shitetu-kantai",
     "title": "紫鉄艦隊",
     "subtitle": "",
-    "icon": "",
-    "iconAlt": "",
-    "description": "",
+    "icon": "./assets/images/games/shitetu-kantai.png",
+    "iconAlt": "紫鉄艦隊の作品アイコン",
+    "description": "◎コンセプト\n宇宙を舞台とした艦隊戦略シミュレーションです。Webならではの手軽さや交流、そして難し\nさをお伝えできたらと思います。\n\n＊多分まだバグは多いです。＊",
     "tags": [
       "シミュレーション",
       "ストラテジー",
@@ -1031,17 +1363,39 @@ window.GAMES = [
     "team": "",
     "gameCard": "あり",
     "tip": "",
-    "controls": [],
+    "controls": [
+      {
+        "device": "キーボード・マウス",
+        "items": [
+          {
+            "keys": [
+              "左クリック"
+            ],
+            "action": "ボタンを押すなど"
+          },
+          {
+            "keys": [
+              "Esc"
+            ],
+            "action": "ゲームの終了"
+          }
+        ]
+      }
+    ],
     "screenshots": [],
-    "video": null
+    "video": null,
+    "inputDevices": [
+      "キーボード",
+      "マウス"
+    ]
   },
   {
     "id": "final-boss",
     "title": "FINAL BOSS",
     "subtitle": "",
-    "icon": "",
-    "iconAlt": "",
-    "description": "",
+    "icon": "./assets/images/games/final-boss.png",
+    "iconAlt": "FINAL BOSSの作品アイコン",
+    "description": "◎コンセプト\n武装を選び、弾幕を張り、BOSSを操るのだ！\n武器の組み合わせを考えながら敵を突破し、ステージの最後に待ち受ける強大なボスに挑\nむ2Dシューティングゲームです。\n多彩な攻撃を扱い、弾幕を張り、敵機体を圧倒せよ！",
     "tags": [
       "シューティング",
       "2D"
@@ -1055,17 +1409,71 @@ window.GAMES = [
     "team": "",
     "gameCard": "なし",
     "tip": "",
-    "controls": [],
+    "controls": [
+      {
+        "device": "キーボード・マウス",
+        "items": [
+          {
+            "keys": [
+              "W / A / S / D",
+              "矢印キー"
+            ],
+            "action": "上下左右移動"
+          },
+          {
+            "keys": [
+              "1",
+              "2",
+              "3"
+            ],
+            "action": "対応する砲セットを選択"
+          },
+          {
+            "keys": [
+              "左クリック"
+            ],
+            "action": "射撃"
+          },
+          {
+            "keys": [
+              "右クリック"
+            ],
+            "action": "特殊射撃（長押しで照準を合わせ、離して発射）"
+          },
+          {
+            "keys": [
+              "ホイール上下"
+            ],
+            "action": "武器の切り替え"
+          },
+          {
+            "keys": [
+              "Esc"
+            ],
+            "action": "一時停止（ポーズ）。ゲーム終了ボタンもある"
+          }
+        ]
+      }
+    ],
     "screenshots": [],
-    "video": null
+    "video": {
+      "type": "local",
+      "src": "./assets/videos/final-boss.mp4",
+      "poster": "./assets/images/games/final-boss.png",
+      "caption": ""
+    },
+    "inputDevices": [
+      "キーボード",
+      "マウス"
+    ]
   },
   {
     "id": "twinfront",
     "title": "TwinFront",
     "subtitle": "",
-    "icon": "",
-    "iconAlt": "",
-    "description": "",
+    "icon": "./assets/images/games/twinfront.gif",
+    "iconAlt": "TwinFrontの作品アイコン",
+    "description": "迷路を作って守り、モブを送って攻める対戦型タワーディフェンスです。自陣の盤面にタ\nワーを置くと、敵のモブはそれをよけて進みます。置き方しだいで敵の歩く道が長くなり、そ\nのぶん長くタワーで撃てます。\nモブを相手の盤面へ送ると、自分の収入が継続的に増えます。守りを固めるか攻めて稼ぐ\nか、お金の分け方が勝負を決めます。敵のライフを0にするとステージ攻略で、CPU が守る5\nつのステージを攻略するとクリアです。\nステージの合間と戦闘中に、3枚のカードから1枚を選びます。選んだカードによって新しい\nタワーやモブが増えるか、レベルが上がります。敵を倒すとゲージがたまり、満タンで必殺技\nを撃てます。必殺技は準備中に、雷雨・援軍・大収穫・総攻撃・回復から1つ選びます。\n・ゲームの流れ：\nカードを選ぶ → 迷路を作る → 開戦 → 攻めと守り → 攻略",
     "tags": [],
     "players": "",
     "playTime": "",
@@ -1076,8 +1484,96 @@ window.GAMES = [
     "team": "",
     "gameCard": "なし",
     "tip": "",
-    "controls": [],
+    "controls": [
+      {
+        "device": "キーボード・マウス",
+        "items": [
+          {
+            "keys": [
+              "左クリック"
+            ],
+            "action": "カードを選ぶ・タワーを置く・置いたタワーを選ぶ"
+          },
+          {
+            "keys": [
+              "右クリック"
+            ],
+            "action": "タワーを置くのをやめる"
+          },
+          {
+            "keys": [
+              "1〜7"
+            ],
+            "action": "建てるタワーを選ぶ"
+          },
+          {
+            "keys": [
+              "Q〜I"
+            ],
+            "action": "モブを送る"
+          },
+          {
+            "keys": [
+              "Shift ＋ Q〜I",
+              "モブのカードを右クリック"
+            ],
+            "action": "自動送りの切り替え"
+          },
+          {
+            "keys": [
+              "Space"
+            ],
+            "action": "訓練（そのステージのあいだ送るモブが強くなる）"
+          },
+          {
+            "keys": [
+              "C"
+            ],
+            "action": "戦闘中に届いたカードを引く"
+          },
+          {
+            "keys": [
+              "F"
+            ],
+            "action": "必殺技"
+          },
+          {
+            "keys": [
+              "P"
+            ],
+            "action": "一時停止"
+          },
+          {
+            "keys": [
+              "M"
+            ],
+            "action": "BGMのオン／オフ"
+          },
+          {
+            "keys": [
+              "Esc"
+            ],
+            "action": "メニュー（タイトルへ戻る）"
+          },
+          {
+            "keys": [
+              "タイトル画面の「ゲーム終了」"
+            ],
+            "action": "ゲームの終了"
+          }
+        ]
+      }
+    ],
     "screenshots": [],
-    "video": null
+    "video": {
+      "type": "local",
+      "src": "./assets/videos/twinfront.mp4",
+      "poster": "./assets/images/games/twinfront.gif",
+      "caption": ""
+    },
+    "inputDevices": [
+      "キーボード",
+      "マウス"
+    ]
   }
 ];
