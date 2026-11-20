@@ -1736,5 +1736,97 @@ window.GAMES = [
       "キーボード",
       "マウス"
     ]
+  },
+  {
+    "id": "cubic-puzzle",
+    "title": "Cubic Puzzle",
+    "subtitle": "",
+    "icon": "./assets/images/games/cubic-puzzle.png",
+    "iconAlt": "Cubic Puzzleの作品アイコン",
+    "description": "立方体の世界を冒険するアクションパズル。\nジャンプで足場を渡り、面をまたいで重力の向きを変えながら、ゴールへの道を見つけよう。",
+    "tags": [
+      "アクション",
+      "パズル",
+      "2D",
+      "3D",
+      "ソロプレイ"
+    ],
+    "players": "",
+    "playTime": "",
+    "platform": "",
+    "creators": [
+      "よもぎーま。"
+    ],
+    "team": "",
+    "gameCard": "",
+    "tip": "",
+    "controls": [
+      {
+        "device": "コントローラー",
+        "items": [
+          {
+            "keys": [
+              "左スティック",
+              "十字ボタン"
+            ],
+            "action": "移動"
+          },
+          {
+            "keys": [
+              "右ボタン"
+            ],
+            "action": "ジャンプ"
+          },
+          {
+            "keys": [
+              "+"
+            ],
+            "action": "メニュー画面"
+          }
+        ]
+      },
+      {
+        "device": "キーボード",
+        "items": [
+          {
+            "keys": [
+              "A",
+              "D",
+              "矢印キー"
+            ],
+            "action": "移動"
+          },
+          {
+            "keys": [
+              "Space"
+            ],
+            "action": "ジャンプ"
+          },
+          {
+            "keys": [
+              "Enter"
+            ],
+            "action": "決定（メニュー内）"
+          },
+          {
+            "keys": [
+              "Esc"
+            ],
+            "action": "メニュー画面"
+          }
+        ]
+      }
+    ],
+    "screenshots": [],
+    "video": {
+      "type": "local",
+      "src": "./assets/videos/cubic-puzzle.mp4",
+      "poster": "./assets/images/games/cubic-puzzle.png",
+      "caption": ""
+    },
+    "inputDevices": [
+      "コントローラー",
+      "キーボード"
+    ]
   }
 ];
