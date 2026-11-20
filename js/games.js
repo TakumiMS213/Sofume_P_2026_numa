@@ -1828,5 +1828,90 @@ window.GAMES = [
       "コントローラー",
       "キーボード"
     ]
+  },
+  {
+    "id": "scramblefarm",
+    "title": "ScrambleFarm",
+    "subtitle": "",
+    "icon": "",
+    "iconAlt": "",
+    "description": "",
+    "tags": [
+      "アクション",
+      "ソロプレイ"
+    ],
+    "players": "",
+    "playTime": "",
+    "platform": "",
+    "creators": [
+      "木霊の四重奏"
+    ],
+    "team": "",
+    "gameCard": "",
+    "tip": "",
+    "controls": [
+      {
+        "device": "キーボード・マウス",
+        "items": [
+          {
+            "keys": [
+              "W",
+              "A",
+              "S",
+              "D"
+            ],
+            "action": "移動"
+          },
+          {
+            "keys": [
+              "左クリック"
+            ],
+            "action": "攻撃（実をつけた作物を攻撃すると収穫）"
+          },
+          {
+            "keys": [
+              "右クリック"
+            ],
+            "action": "回避"
+          },
+          {
+            "keys": [
+              "マウススクロール"
+            ],
+            "action": "武器切り替え"
+          },
+          {
+            "keys": [
+              "X"
+            ],
+            "action": "メニュー（植える作物の変更・収穫した作物を食べてステータス上昇）"
+          },
+          {
+            "keys": [
+              "F"
+            ],
+            "action": "作物を植える（畑の上で。植える作物はXメニューで設定）"
+          },
+          {
+            "keys": [
+              "R"
+            ],
+            "action": "スキル獲得（戦闘経験値・農業経験値のどちらかがMAXの状態で、フィールド上部の店の近くで）"
+          },
+          {
+            "keys": [
+              "Esc"
+            ],
+            "action": "ゲームの終了"
+          }
+        ]
+      }
+    ],
+    "screenshots": [],
+    "video": null,
+    "inputDevices": [
+      "キーボード",
+      "マウス"
+    ]
   }
 ];
