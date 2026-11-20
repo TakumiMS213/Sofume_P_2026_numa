@@ -1681,5 +1681,60 @@ window.GAMES = [
     "inputDevices": [
       "キーボード"
     ]
+  },
+  {
+    "id": "furafura-drunk-route",
+    "title": "ふらふらドランクルート",
+    "subtitle": "",
+    "icon": "./assets/images/games/furafura-drunk-route.png",
+    "iconAlt": "ふらふらドランクルートの作品アイコン",
+    "description": "",
+    "tags": [
+      "アクション",
+      "2D",
+      "ソロプレイ"
+    ],
+    "players": "",
+    "playTime": "",
+    "platform": "",
+    "creators": [
+      "しい"
+    ],
+    "team": "",
+    "gameCard": "",
+    "tip": "",
+    "controls": [
+      {
+        "device": "キーボード",
+        "items": [
+          {
+            "keys": [
+              "W",
+              "A",
+              "S",
+              "D"
+            ],
+            "action": "操作（不定期にキー操作が入れ替わり、水を入手すると一定時間固定される）"
+          },
+          {
+            "keys": [
+              "Esc"
+            ],
+            "action": "ゲーム終了"
+          }
+        ]
+      }
+    ],
+    "screenshots": [],
+    "video": {
+      "type": "local",
+      "src": "./assets/videos/furafura-drunk-route.mp4",
+      "poster": "./assets/images/games/furafura-drunk-route.png",
+      "caption": ""
+    },
+    "inputDevices": [
+      "キーボード",
+      "マウス"
+    ]
   }
 ];
