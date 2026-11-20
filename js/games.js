@@ -8,7 +8,7 @@ window.EXHIBITION = {
   sampleMode: false,
 };
 
-// 本提出の作品のみ掲載。照合元・表記変更は docs/submission-reconciliation.md を参照。
+// 本提出の作品とユーザー指定の追加作品を掲載。照合元・表記変更は docs/submission-reconciliation.md を参照。
 window.GAMES = [
   {
     "id": "garagara",
@@ -1574,6 +1574,112 @@ window.GAMES = [
     "inputDevices": [
       "キーボード",
       "マウス"
+    ]
+  },
+  {
+    "id": "akagari",
+    "title": "赤刈",
+    "subtitle": "",
+    "icon": "./assets/images/games/akagari.png",
+    "iconAlt": "赤刈の作品アイコン",
+    "description": "鬼ごっこの合戦バージョンです。鬼から逃げる、鬼が落とす金銭を集めることでゲージをた\nめて、逆に鬼を倒してください。\n\nゲームの流れ\nとりあえず逃げる→余裕があればコインを集める→勝てると思えるほどにゲージをためる→\n覚悟を決めて敵に突っ込む→敵を倒す→最初に戻る",
+    "tags": [
+      "アクション",
+      "2D",
+      "ソロプレイ"
+    ],
+    "players": "",
+    "playTime": "",
+    "platform": "",
+    "creators": [
+      "D"
+    ],
+    "team": "",
+    "gameCard": "",
+    "tip": "",
+    "controls": [
+      {
+        "device": "戦闘画面（キーボード）",
+        "items": [
+          {
+            "keys": [
+              "W / A / S / D",
+              "矢印キー"
+            ],
+            "action": "押した方向（主体は自分）に移動"
+          },
+          {
+            "keys": [
+              "Space"
+            ],
+            "action": "アクション（押している間、体ゲージを消費して高速移動・壁破壊。完全に切れると、半分以上回復するまで高速移動不可）"
+          },
+          {
+            "keys": [
+              "Esc"
+            ],
+            "action": "ポーズ画面に移動"
+          }
+        ]
+      },
+      {
+        "device": "ポーズ画面（キーボード）",
+        "items": [
+          {
+            "keys": [
+              "Esc"
+            ],
+            "action": "ゲームの終了を選択"
+          },
+          {
+            "keys": [
+              "Y"
+            ],
+            "action": "ゲームの終了（終了選択時）"
+          },
+          {
+            "keys": [
+              "Y以外のキー"
+            ],
+            "action": "戻る（終了選択時）"
+          },
+          {
+            "keys": [
+              "R",
+              "0〜6"
+            ],
+            "action": "Rを押した後、0〜6のキーでゲームステージを変更"
+          },
+          {
+            "keys": [
+              "O"
+            ],
+            "action": "操作説明（できることとゲージの説明）"
+          },
+          {
+            "keys": [
+              "K"
+            ],
+            "action": "クレジットの表記"
+          },
+          {
+            "keys": [
+              "B"
+            ],
+            "action": "今のゲームに戻る"
+          }
+        ]
+      }
+    ],
+    "screenshots": [],
+    "video": {
+      "type": "local",
+      "src": "./assets/videos/akagari.mp4",
+      "poster": "./assets/images/games/akagari.png",
+      "caption": ""
+    },
+    "inputDevices": [
+      "キーボード"
     ]
   }
 ];
