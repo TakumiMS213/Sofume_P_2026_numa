@@ -779,6 +779,12 @@ button:focus-visible,a:focus-visible,video:focus-visible,[tabindex]:focus-visibl
   line-height:1
 }
 
+.listing-note {
+  margin-top:8px;
+  color:var(--muted);
+  font-size:11px
+}
+
 .filter-help {
   margin-top:20px;
   color:var(--muted);
