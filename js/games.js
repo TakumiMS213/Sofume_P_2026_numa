@@ -740,8 +740,8 @@ window.GAMES = [
     "id": "phaselink",
     "title": "PhaseLINK",
     "subtitle": "",
-    "icon": "",
-    "iconAlt": "",
+    "icon": "./assets/images/games/phaselink.png",
+    "iconAlt": "PhaseLINKの作品アイコン",
     "description": "キーボードを使用した音楽ゲーム。自分で難易度を選びプレイ。譜面を作り、共有すること\nも可能。\n\nゲームの流れ:\n曲を選択→難易度を選択→プレイ",
     "tags": [
       "リズム"
@@ -790,7 +790,12 @@ window.GAMES = [
       }
     ],
     "screenshots": [],
-    "video": null,
+    "video": {
+      "type": "local",
+      "src": "./assets/videos/phaselink.mp4",
+      "poster": "./assets/images/games/phaselink.png",
+      "caption": ""
+    },
     "inputDevices": [
       "キーボード",
       "マウス"
@@ -1458,7 +1463,7 @@ window.GAMES = [
     "screenshots": [],
     "video": {
       "type": "local",
-      "src": "./assets/videos/final-boss.mp4",
+      "src": "./assets/videos/final-boss-5f9a2d919163.mp4",
       "poster": "./assets/images/games/final-boss.png",
       "caption": ""
     },
